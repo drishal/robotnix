@@ -10,13 +10,13 @@ branch=$1
 
 args=(
     --ref-type branch
-    "https://github.com/LineageOS/android"
+    "https://github.com/ForkLineageOS/android"
     "$branch"
     */repo*.json
 )
 
 export TMPDIR=/tmp
 
-./update_device_metadata.py
+#./update_device_metadata.py
 ../../scripts/mk_repo_file.py --out "${branch}/repo.json" "${args[@]}"
-./update_device_dirs.py --branch "$branch"
+#./update_device_dirs.py --branch "$branch"
