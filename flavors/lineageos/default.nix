@@ -28,7 +28,8 @@ let
       's/^DTB_OBJS := $(shell find \(.*\))$/DTB_OBJS := $(sort $(shell find \1))/' \
       arch/arm64/boot/Makefile
   '';
-  kernelsNeedFix = [ # Only verified marlin reproducibility is fixed by this, however these other repos have the same issue
+  kernelsNeedFix = [
+    # Only verified marlin reproducibility is fixed by this, however these other repos have the same issue
     "kernel/asus/sm8150"
     "kernel/bq/msm8953"
     "kernel/essential/msm8998"
@@ -63,13 +64,16 @@ let
   supportedDevices = attrNames deviceMetadata;
 
   # TODO: Move this filtering into vanilla/graphene
-  filterDirAttrs = dir: filterAttrs (n: v: elem n ["rev" "sha256" "url" "patches" "postPatch"]) dir;
+  filterDirAttrs = dir: filterAttrs (n: v: elem n [ "rev" "sha256" "url" "patches" "postPatch" ]) dir;
   filterDirsAttrs = dirs: mapAttrs (n: v: filterDirAttrs v) dirs;
-in mkIf (config.flavor == "lineageos")
+in
+mkIf (config.flavor == "lineageos")
 {
-  androidVersion = let
+  androidVersion =
+    let
       defaultBranch = deviceMetadata.${config.device}.branch;
-    in mkIf (deviceMetadata ? ${config.device}) (mkDefault (lib.toInt lineageBranchToAndroidVersion.${defaultBranch}));
+    in
+    mkIf (deviceMetadata ? ${config.device}) (mkDefault (lib.toInt lineageBranchToAndroidVersion.${defaultBranch}));
 
   productNamePrefix = "lineage_"; # product names start with "lineage_"
 
@@ -78,7 +82,8 @@ in mkIf (config.flavor == "lineageos")
   # LineageOS uses this by default. If your device supports it, I recommend using variant = "user"
   variant = mkDefault "userdebug";
 
-  warnings = optional (
+  warnings = optional
+    (
       (config.device != null) &&
       !(elem config.device supportedDevices) &&
       (config.deviceFamily != "generic")
@@ -89,14 +94,14 @@ in mkIf (config.flavor == "lineageos")
     repoDirs
 
     {
-      "vendor/lineage".patches = [
-        ./0001-Remove-LineageOS-keys.patch
-        (pkgs.substituteAll {
-          src = ./0002-bootanimation-Reproducibility-fix.patch;
-          inherit (pkgs) imagemagick;
-        })
-        ./0003-kernel-Set-constant-kernel-timestamp.patch
-      ];
+      #    "vendor/lineage".patches = [
+      #      ./0001-Remove-LineageOS-keys.patch
+      #      (pkgs.substituteAll {
+      #        src = ./0002-bootanimation-Reproducibility-fix.patch;
+      #        inherit (pkgs) imagemagick;
+      #      })
+      #      ./0003-kernel-Set-constant-kernel-timestamp.patch
+      #    ];
       "system/extras".patches = [
         # pkgutil.get_data() not working, probably because we don't use their compiled python
         (pkgs.fetchpatch {
@@ -112,23 +117,29 @@ in mkIf (config.flavor == "lineageos")
     }
   ] ++ optionals (deviceMetadata ? "${config.device}") [
     # Device-specific source dirs
-    (let
-      vendor = toLower deviceMetadata.${config.device}.vendor;
-      relpathWithDependencies = relpath: [ relpath ] ++ (flatten (map (p: relpathWithDependencies p) deviceDirs.${relpath}.deps));
-      relpaths = relpathWithDependencies "device/${vendor}/${config.device}";
-      filteredRelpaths = remove (attrNames repoDirs) relpaths; # Remove any repos that we're already including from repo json
-    in filterDirsAttrs (getAttrs filteredRelpaths deviceDirs))
+    (
+      let
+        vendor = toLower deviceMetadata.${config.device}.vendor;
+        relpathWithDependencies = relpath: [ relpath ] ++ (flatten (map (p: relpathWithDependencies p) deviceDirs.${relpath}.deps));
+        relpaths = relpathWithDependencies "device/${vendor}/${config.device}";
+        filteredRelpaths = remove (attrNames repoDirs) relpaths; # Remove any repos that we're already including from repo json
+      in
+      filterDirsAttrs (getAttrs filteredRelpaths deviceDirs)
+    )
 
     # Vendor-specific source dirs
-    (let
-      _vendor = toLower deviceMetadata.${config.device}.vendor;
-      vendor = if config.device == "shamu" then "motorola" else _vendor;
-      relpath = "vendor/${vendor}";
-    in filterDirsAttrs (getAttrs [relpath] vendorDirs))
+    (
+      let
+        _vendor = toLower deviceMetadata.${config.device}.vendor;
+        vendor = if config.device == "shamu" then "motorola" else _vendor;
+        relpath = "vendor/${vendor}";
+      in
+      filterDirsAttrs (getAttrs [ relpath ] vendorDirs)
+    )
   ] ++ optional (config.device == "bacon")
     # Bacon needs vendor/oppo in addition to vendor/oneplus
     # See https://github.com/danielfullmer/robotnix/issues/26
-    (filterDirsAttrs (getAttrs ["vendor/oppo"] vendorDirs))
+    (filterDirsAttrs (getAttrs [ "vendor/oppo" ] vendorDirs))
   );
 
   source.manifest.url = mkDefault "https://github.com/LineageOS/android.git";
@@ -148,12 +159,12 @@ in mkIf (config.flavor == "lineageos")
   # Needed by included kernel build for some devices (pioneer at least)
   envPackages = [ pkgs.openssl.dev ] ++ optionals (config.androidVersion == 11) [ pkgs.gcc.cc pkgs.glibc.dev ];
 
-  envVars.RELEASE_TYPE = mkDefault "EXPERIMENTAL";  # Other options are RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL
+  #envVars.RELEASE_TYPE = mkDefault "EXPERIMENTAL";  # Other options are RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL
 
   # LineageOS flattens all APEX packages: https://review.lineageos.org/c/LineageOS/android_vendor_lineage/+/270212
-  signing.apex.enable = false;
+  #signing.apex.enable = false;
   # This environment variable is set in android/build.sh under https://github.com/lineageos-infra/build-config
-  envVars.OVERRIDE_TARGET_FLATTEN_APEX = "true";
+  #envVars.OVERRIDE_TARGET_FLATTEN_APEX = "true";
 
   # LineageOS needs this additional command line argument to enable
   # backuptool.sh, which runs scripts under /system/addons.d
