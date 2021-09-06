@@ -28,8 +28,7 @@ let
       's/^DTB_OBJS := $(shell find \(.*\))$/DTB_OBJS := $(sort $(shell find \1))/' \
       arch/arm64/boot/Makefile
   '';
-  kernelsNeedFix = [
-    # Only verified marlin reproducibility is fixed by this, however these other repos have the same issue
+  kernelsNeedFix = [ # Only verified marlin reproducibility is fixed by this, however these other repos have the same issue
     "kernel/asus/sm8150"
     "kernel/bq/msm8953"
     "kernel/essential/msm8998"
@@ -64,16 +63,13 @@ let
   supportedDevices = attrNames deviceMetadata;
 
   # TODO: Move this filtering into vanilla/graphene
-  filterDirAttrs = dir: filterAttrs (n: v: elem n [ "rev" "sha256" "url" "patches" "postPatch" ]) dir;
+  filterDirAttrs = dir: filterAttrs (n: v: elem n ["rev" "sha256" "url" "patches" "postPatch"]) dir;
   filterDirsAttrs = dirs: mapAttrs (n: v: filterDirAttrs v) dirs;
-in
-mkIf (config.flavor == "lineageos")
+in mkIf (config.flavor == "lineageos")
 {
-  androidVersion =
-    let
+  androidVersion = let
       defaultBranch = deviceMetadata.${config.device}.branch;
-    in
-    mkIf (deviceMetadata ? ${config.device}) (mkDefault (lib.toInt lineageBranchToAndroidVersion.${defaultBranch}));
+    in mkIf (deviceMetadata ? ${config.device}) (mkDefault (lib.toInt lineageBranchToAndroidVersion.${defaultBranch}));
 
   productNamePrefix = "lineage_"; # product names start with "lineage_"
 
@@ -82,8 +78,7 @@ mkIf (config.flavor == "lineageos")
   # LineageOS uses this by default. If your device supports it, I recommend using variant = "user"
   variant = mkDefault "userdebug";
 
-  warnings = optional
-    (
+  warnings = optional (
       (config.device != null) &&
       !(elem config.device supportedDevices) &&
       (config.deviceFamily != "generic")
@@ -113,53 +108,47 @@ mkIf (config.flavor == "lineageos")
 
       # LineageOS will sometimes force-push to this repo, and the older revisions are garbage collected.
       # So we'll just build chromium webview ourselves.
-      #      "external/chromium-webview".enable = false;
+      "external/chromium-webview".enable = false;
     }
   ] ++ optionals (deviceMetadata ? "${config.device}") [
     # Device-specific source dirs
-    (
-      let
-        vendor = toLower deviceMetadata.${config.device}.vendor;
-        relpathWithDependencies = relpath: [ relpath ] ++ (flatten (map (p: relpathWithDependencies p) deviceDirs.${relpath}.deps));
-        relpaths = relpathWithDependencies "device/${vendor}/${config.device}";
-        filteredRelpaths = remove (attrNames repoDirs) relpaths; # Remove any repos that we're already including from repo json
-      in
-      filterDirsAttrs (getAttrs filteredRelpaths deviceDirs)
-    )
+    (let
+      vendor = toLower deviceMetadata.${config.device}.vendor;
+      relpathWithDependencies = relpath: [ relpath ] ++ (flatten (map (p: relpathWithDependencies p) deviceDirs.${relpath}.deps));
+      relpaths = relpathWithDependencies "device/${vendor}/${config.device}";
+      filteredRelpaths = remove (attrNames repoDirs) relpaths; # Remove any repos that we're already including from repo json
+    in filterDirsAttrs (getAttrs filteredRelpaths deviceDirs))
 
     # Vendor-specific source dirs
-    (
-      let
-        _vendor = toLower deviceMetadata.${config.device}.vendor;
-        vendor = if config.device == "shamu" then "motorola" else _vendor;
-        relpath = "vendor/${vendor}";
-      in
-      filterDirsAttrs (getAttrs [ relpath ] vendorDirs)
-    )
+    (let
+      _vendor = toLower deviceMetadata.${config.device}.vendor;
+      vendor = if config.device == "shamu" then "motorola" else _vendor;
+      relpath = "vendor/${vendor}";
+    in filterDirsAttrs (getAttrs [relpath] vendorDirs))
   ] ++ optional (config.device == "bacon")
     # Bacon needs vendor/oppo in addition to vendor/oneplus
     # See https://github.com/danielfullmer/robotnix/issues/26
-    (filterDirsAttrs (getAttrs [ "vendor/oppo" ] vendorDirs))
+    (filterDirsAttrs (getAttrs ["vendor/oppo"] vendorDirs))
   );
 
   source.manifest.url = mkDefault "https://github.com/LineageOS/android.git";
   source.manifest.rev = mkDefault "refs/heads/${LineageOSRelease}";
 
   # Enable robotnix-built chromium / webview
-  #  apps.chromium.enable = mkDefault true;
-  #  webview.chromium.availableByDefault = mkDefault true;
-  #  webview.chromium.enable = mkDefault true;
+  apps.chromium.enable = mkDefault true;
+  webview.chromium.availableByDefault = mkDefault true;
+  webview.chromium.enable = mkDefault true;
 
   # This is the prebuilt webview apk from LineageOS. Adding this here is only
   # for convenience if the end-user wants to set `webview.prebuilt.enable = true;`.
-  #  webview.prebuilt.apk = config.source.dirs."external/chromium-webview".src + "/prebuilt/${config.arch}/webview.apk";
-  #  webview.prebuilt.availableByDefault = mkDefault true;
-  #  removedProductPackages = [ "webview" ];
+  webview.prebuilt.apk = config.source.dirs."external/chromium-webview".src + "/prebuilt/${config.arch}/webview.apk";
+  webview.prebuilt.availableByDefault = mkDefault true;
+  removedProductPackages = [ "webview" ];
 
   # Needed by included kernel build for some devices (pioneer at least)
   envPackages = [ pkgs.openssl.dev ] ++ optionals (config.androidVersion == 11) [ pkgs.gcc.cc pkgs.glibc.dev ];
 
-  envVars.RELEASE_TYPE = mkDefault "EXPERIMENTAL"; # Other options are RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL
+  envVars.RELEASE_TYPE = mkDefault "EXPERIMENTAL";  # Other options are RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL
 
   # LineageOS flattens all APEX packages: https://review.lineageos.org/c/LineageOS/android_vendor_lineage/+/270212
   signing.apex.enable = false;
