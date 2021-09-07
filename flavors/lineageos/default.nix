@@ -94,14 +94,14 @@ mkIf (config.flavor == "lineageos")
     repoDirs
 
     {
-      #    "vendor/lineage".patches = [
-      #      ./0001-Remove-LineageOS-keys.patch
-      #      (pkgs.substituteAll {
-      #        src = ./0002-bootanimation-Reproducibility-fix.patch;
-      #        inherit (pkgs) imagemagick;
-      #      })
-      #      ./0003-kernel-Set-constant-kernel-timestamp.patch
-      #    ];
+      "vendor/lineage".patches = [
+        ./0001-Remove-LineageOS-keys.patch
+        (pkgs.substituteAll {
+          src = ./0002-bootanimation-Reproducibility-fix.patch;
+          inherit (pkgs) imagemagick;
+        })
+        ./0003-kernel-Set-constant-kernel-timestamp.patch
+      ];
       "system/extras".patches = [
         # pkgutil.get_data() not working, probably because we don't use their compiled python
         (pkgs.fetchpatch {
