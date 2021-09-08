@@ -63,6 +63,8 @@ let
       cp ${config.source.dirs."system/libufdt".src}/utils/src/mkdtboimg.py $out/bin
     '';
   };
+
+  postRedfin = lib.elem config.deviceFamily [ "redfin" "barbet" ];
 in
 {
   options = {
@@ -169,8 +171,8 @@ in
         nukeReferences
       ]
       ++ lib.optionals (cfg.compiler == "clang") [ prebuiltClang ]  # TODO: Generalize to other arches
-      ++ lib.optionals (config.deviceFamily != "redfin") [ prebuiltGCC prebuiltGCCarm32 ]
-      ++ lib.optionals (config.deviceFamily == "redfin") [
+      ++ lib.optionals (!postRedfin) [ prebuiltGCC prebuiltGCCarm32 ]
+      ++ lib.optionals postRedfin [
         # HACK: Additional dependencies needed by redfin.
         python bison flex cpio
         prebuiltGas
@@ -184,7 +186,7 @@ in
         "ARCH=arm64"
         #"CONFIG_COMPAT_VDSO=n"
       ] ++ (
-        if (config.deviceFamily == "redfin")
+        if postRedfin
         then [
           "LLVM=1"
           # Redfin kernel builds still need "gas" (GNU assembler), everything else is LLVM
@@ -226,6 +228,7 @@ in
       installPhase = ''
         mkdir -p $out
         shopt -s globstar nullglob
+        ${lib.optionalString postRedfin "cp out/arch/arm64/boot/dtbo_${config.device}.img out/arch/arm64/boot/dtbo.img"}
       '' + (lib.concatMapStringsSep "\n" (filename: "cp out/${filename} $out/") cfg.buildProductFilenames)
       + ''
 
@@ -235,7 +238,7 @@ in
 
       dontFixup = true;
       dontStrip = true;
-    } // lib.optionalAttrs (lib.elem config.deviceFamily [ "coral" "sunfish" "redfin" ]) {
+    } // lib.optionalAttrs (lib.elem config.deviceFamily [ "coral" "sunfish" "redfin" "barbet" ]) {
       # HACK: Needed for coral (pixel 4) (Don't turn this on for other devices)
       DTC_EXT = "${prebuiltMisc}/bin/dtc";
       DTC_OVERLAY_TEST_EXT = "${prebuiltMisc}/bin/ufdt_apply_overlay";
