@@ -26,5 +26,5 @@ jobs:
       with:
         author_name: Ilan Joselevich
         author_email: personal@ilanjoselevich.com
-        message: 'lineageos: $(date +%Y.%m.%d.%H -d @$DATE)'
+        message: 'ForkLineageOS: $(date +%Y.%m.%d.%H -d @$DATE)'
         add: '["flavors/lineageos/default.nix","flavors/lineageos/lineage-18.1"]'
