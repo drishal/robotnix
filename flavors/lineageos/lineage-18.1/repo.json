@@ -79,9 +79,9 @@
         "src": "tools"
       }
     ],
-    "rev": "7c2eb32fc392c9360aa49a52f671c2cf58f2225f",
+    "rev": "de90a6ca84b7865a1e9a12a31b4647828222323d",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1bj02qbh3xbfjvi74chsk0ad55zrkdrpq1n1gcslfk22mrz0p57j",
+    "sha256": "15ys0ysxxfi8igwv16z9z46h23lj185a63ah1g8b904g7jlq96sg",
     "url": "https://github.com/ForkLineageOS/android_build"
   },
   "build/soong": {
@@ -2145,9 +2145,9 @@
   },
   "external/libjpeg-turbo": {
     "groups": [],
-    "rev": "2a2bc61c7fb6ca5c587d93ae90dfc3f312b61524",
+    "rev": "535fcb26e6e60784a4fd253adb85b46ecb449258",
     "revisionExpr": "refs/heads/r",
-    "sha256": "1imrlz705ndr0p2bmkxnjmmfh5p9jv229d33k5hzn66dndy94i1v",
+    "sha256": "0808xw07ahgb9mzg7bk9my9363w0cfcmqndnx4a0qfrzia7xfrld",
     "url": "https://github.com/Wave-Project/external_libjpeg-turbo"
   },
   "external/libkmsxx": {
@@ -3956,7 +3956,7 @@
     "groups": [
       "pdk"
     ],
-    "rev": "3f5ff39a2048255392c6b6c9c701b8093d0a7bab",
+    "rev": "f8acc821bffbe7761ea474ca923e8e7b83b0cd7d",
     "revisionExpr": "lineage-18.1",
     "sha256": "15zx9x7viycicz26kmazsqlicn2ak5d2sas48kk0n776hysaxbqf",
     "url": "https://github.com/ForkLineageOS/android_frameworks_native"
@@ -5392,9 +5392,9 @@
     "groups": [
       "infra"
     ],
-    "rev": "cd32a30367d9c3d155ca60a93a9e91feea8e62f5",
+    "rev": "5d4e96b7c1cc4adbe8b8ac363eff29e7df5e6531",
     "revisionExpr": "master",
-    "sha256": "0k22hb6b111qgc23xxx909ydvz06sd58ihxw63agkkn43b4cl7zx",
+    "sha256": "1pzpqp0jlc8ij7m86hj5pdpnhjq07fakm58rrlcdws4kmj98mrv6",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -5742,7 +5742,7 @@
   },
   "packages/apps/Launcher3": {
     "groups": [],
-    "rev": "1565da1d4053d61a224369400175a2614baa764f",
+    "rev": "38331a0d2c04449a68059f605695794bce5c0798",
     "revisionExpr": "lineage-18.1",
     "sha256": "06a0lcrrln9z917va8h6cny5cq4nl68s6wzb2in6s8y6zvnkyzyl",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Launcher3"
@@ -5788,9 +5788,9 @@
   },
   "packages/apps/Nfc": {
     "groups": [],
-    "rev": "2047ac56a36a3e0ab9ca9ededf0079bb43ffca47",
+    "rev": "b349d1f5aa9675bb55c182bf407ec4525a11745d",
     "revisionExpr": "lineage-18.1",
-    "sha256": "07p0cyi1224kw2k7vkxwb1avy5lrj4g9q2x0ddlqmd3pq676v2iv",
+    "sha256": "0lp96nsq8z1if6gl97fxz1b76y1yqimipx0sh30yj0fc13q8cvp6",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Nfc"
   },
   "packages/apps/OnDeviceAppPrediction": {
@@ -5907,7 +5907,7 @@
   },
   "packages/apps/Settings": {
     "groups": [],
-    "rev": "d3f125c95bf544116189e03a75cef0f84ae1616f",
+    "rev": "07c8a4a6fad71f83d50533b1dc409d26ac7d2653",
     "revisionExpr": "lineage-18.1",
     "sha256": "105myfiyh9agyl5yhbj7jrsxww5rv6mx6hfbpgqv6miwkw7pmlr8",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
@@ -6194,9 +6194,9 @@
   },
   "packages/overlays/Lineage": {
     "groups": [],
-    "rev": "0e821afed8c05be9cf8ac1eb1166d97dc6383e87",
+    "rev": "5d9f1014dfcbf973b913f87f3b1d5b87f5d2ff87",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1zdfdw2h21vlrf1mirn9w7ag9298s2qz5zqaflldns8x66icl4vi",
+    "sha256": "0j5wvipk7svhy24ac2ik65qidwibl8xa6d71zd8ix3s24jpa4zla",
     "url": "https://github.com/ForkLineageOS/android_packages_overlays_Lineage"
   },
   "packages/providers/BlockedNumberProvider": {
@@ -6992,7 +6992,7 @@
   },
   "system/bt": {
     "groups": [],
-    "rev": "a32c9b93c6ebd649375ab0984bde3a108e3c3089",
+    "rev": "af614532d006c10e0a6054854ff9da87384087b0",
     "revisionExpr": "lineage-18.1",
     "sha256": "0a1y5az3djmd5bbrgrnfiyks723qsl4mh4znmyg23phfihpakrr7",
     "url": "https://github.com/ForkLineageOS/android_system_bt"
@@ -7268,7 +7268,7 @@
   },
   "system/sepolicy": {
     "groups": [],
-    "rev": "b1d1ee94a587711e732af218f5e7caa05802f1f3",
+    "rev": "c2ae3b859d7da0657263d8fae85ec0355331025f",
     "revisionExpr": "lineage-18.1",
     "sha256": "0v2lrs1l300vx5vf8yq72mqm3zqdb3j6d5ffdwb9ff2bvh62k6mc",
     "url": "https://github.com/ForkLineageOS/android_system_sepolicy"
@@ -7831,9 +7831,9 @@
   },
   "vendor/lineage": {
     "groups": [],
-    "rev": "8852e98ad32ad078a93dcf82a0b838a6d7e99012",
+    "rev": "7dcd211023798cf3e67df183aceb0d8f4466f9d3",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0z1a84msmakgifw4ppiyc272mmfwhdv30yr6rk8p2ni9adbn37jv",
+    "sha256": "0bnkbjl7s1ynszqv2l02zgvs57p8nklp1ikjpkq1v1b5ygl528g7",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
