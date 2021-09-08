@@ -1,6 +1,6 @@
 name: "Update ForkLineageOS"
 
-on: { schedule: [{ cron: '0 0 */3 * *' }], workflow_dispatch }
+on: { schedule: [{ cron: '0 0 1,15 * *' }], workflow_dispatch }
 
 jobs:
   updates:
