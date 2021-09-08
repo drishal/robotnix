@@ -10,9 +10,9 @@ branch=$1
 
 args=(
     --ref-type branch
-    "https://github.com/ForkLineageOS/android"
+    --cache-search-path ../../
+    "https://github.com/LineageOS/android"
     "$branch"
-    */repo*.json
 )
 
 export TMPDIR=/tmp
