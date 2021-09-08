@@ -11,7 +11,7 @@ branch=$1
 args=(
     --ref-type branch
     --cache-search-path ../../
-    "https://github.com/LineageOS/android"
+    "https://github.com/ForkLineageOS/android"
     "$branch"
 )
 
