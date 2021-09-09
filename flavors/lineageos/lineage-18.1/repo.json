@@ -79,9 +79,9 @@
         "src": "tools"
       }
     ],
-    "rev": "de90a6ca84b7865a1e9a12a31b4647828222323d",
+    "rev": "e7a7b71020b6e54e2c2291e6fe690d08670c498f",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "15ys0ysxxfi8igwv16z9z46h23lj185a63ah1g8b904g7jlq96sg",
+    "sha256": "1rdx4kcm9hgc7qg6l4yx916shxsxvqjn4phh7p35nwarvfws8n09",
     "url": "https://github.com/ForkLineageOS/android_build"
   },
   "build/soong": {
@@ -96,9 +96,9 @@
         "src": "bootstrap.bash"
       }
     ],
-    "rev": "4725d185cdbe063ce58a4b7991836c9edf2416cc",
+    "rev": "d6ce9f35ea400c54881c37650ef326c491469cf4",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1qwsc2dpal822i2n7dc4yznrxhsp3nxybrcl8icbnlpvggpjb2cn",
+    "sha256": "0k481ynnh3yrf782v7jwhi1bm50lz630bn2hwina2csfbaq9krga",
     "url": "https://github.com/ForkLineageOS/android_build_soong"
   },
   "compatibility/cdd": {
@@ -417,9 +417,9 @@
       "pdk-qcom",
       "qcom"
     ],
-    "rev": "2e3d1639f85b9878959ccd9ca201a89d593279c9",
+    "rev": "a3e5797421fa59c908a87b3b4bf307ab74f6ab38",
     "revisionExpr": "lineage-18.1-legacy",
-    "sha256": "01agn82wzc288dlk562hc7iardshag4qcfq6k97bskpzlvxssl50",
+    "sha256": "0i11vl1kyrkfkc6cirg7zi40qrdc70c4m2w6f82fhb4mpsan4m3l",
     "url": "https://github.com/LineageOS/android_device_qcom_sepolicy"
   },
   "device/qcom/sepolicy-legacy-um": {
@@ -4183,9 +4183,9 @@
   },
   "frameworks/base": {
     "groups": [],
-    "rev": "98443aec94f400ee5244997f8763905021f373c5",
+    "rev": "d83b07ed8a34330a24a4cc66d3d82086bbeddc14",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1s292mbaj9vi45g98c58gljxvhfg2jmyvsy3ibg29bgr51g3gm8x",
+    "sha256": "1rcn1zypvl5gdc4n9p4s245hgjvqglmhfr3nyy7x8qkms79ap9pr",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -4968,9 +4968,9 @@
       "qcom",
       "qcom_audio"
     ],
-    "rev": "5662f0479700989926da369fc65e97302064741a",
+    "rev": "dab793a09339de7700b3b1ea918cdec780f5bfff",
     "revisionExpr": "lineage-18.1-caf-msm8974",
-    "sha256": "1dl2r92rxbhfhsrx6351vji1k919b37hlpw9qd4dibyg7jrb98dn",
+    "sha256": "092ph9bkwnav78aqqlfhl3q7nyr032xflk362pf84s0wn5mizdxx",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/msm8974/display": {
@@ -7788,9 +7788,9 @@
   },
   "system/sepolicy": {
     "groups": [],
-    "rev": "c2ae3b859d7da0657263d8fae85ec0355331025f",
+    "rev": "3212fda23bef5e947f38c56aabc0f4caf54377ff",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0v2lrs1l300vx5vf8yq72mqm3zqdb3j6d5ffdwb9ff2bvh62k6mc",
+    "sha256": "163b1crx1zk96hb6rq0f5x51da6pl3afmnrpvfddjyddi1wpxlpf",
     "url": "https://github.com/ForkLineageOS/android_system_sepolicy"
   },
   "system/server_configurable_flags": {
@@ -8399,9 +8399,9 @@
   },
   "vendor/lineage": {
     "groups": [],
-    "rev": "7dcd211023798cf3e67df183aceb0d8f4466f9d3",
+    "rev": "2840bed74f5aefc3dcda8daf083ae11d63609a39",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0bnkbjl7s1ynszqv2l02zgvs57p8nklp1ikjpkq1v1b5ygl528g7",
+    "sha256": "0pm77byqv3l42jfa8f26abl0k2m32a76jgjw70vsn499s3r7y448",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
