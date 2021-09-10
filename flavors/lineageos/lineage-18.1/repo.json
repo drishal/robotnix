@@ -4183,9 +4183,9 @@
   },
   "frameworks/base": {
     "groups": [],
-    "rev": "d83b07ed8a34330a24a4cc66d3d82086bbeddc14",
+    "rev": "6ff4169c8934cef4cb334c532cf8be94813778aa",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1rcn1zypvl5gdc4n9p4s245hgjvqglmhfr3nyy7x8qkms79ap9pr",
+    "sha256": "13y6mbbbab6z2knlgimc73qhr6b5fvkb0q2nhnl8spka1dmnscxn",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -6111,9 +6111,9 @@
   },
   "packages/apps/FaceUnlockService": {
     "groups": [],
-    "rev": "717fac083e72490c8c7746586d4108797eaf555e",
+    "rev": "9b412640133a94f000efeeeae1e96753290a1e7b",
     "revisionExpr": "eleven",
-    "sha256": "1c2whr47xrf7l3053d1bxkyqqxnipvhxxqynv7ik34saw46sl1ci",
+    "sha256": "1f2f5bxd846xphy0vzk362yx9a6fxc0gz0xr87mjdvv7bj5l4y25",
     "url": "https://github.com/PixelExperience/packages_apps_FaceUnlockService"
   },
   "packages/apps/FlipFlap": {
@@ -6330,9 +6330,9 @@
   },
   "packages/apps/Settings": {
     "groups": [],
-    "rev": "07c8a4a6fad71f83d50533b1dc409d26ac7d2653",
+    "rev": "1e2351283c31f3f0927ec5c47764247a7335875e",
     "revisionExpr": "lineage-18.1",
-    "sha256": "105myfiyh9agyl5yhbj7jrsxww5rv6mx6hfbpgqv6miwkw7pmlr8",
+    "sha256": "1wfjrspp5v3apf7qfskmh3nb29lmarnzqxvd89msdqn88b070paj",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
@@ -8399,9 +8399,9 @@
   },
   "vendor/lineage": {
     "groups": [],
-    "rev": "2840bed74f5aefc3dcda8daf083ae11d63609a39",
+    "rev": "ca9f355f3ea63a07bf958f0043dccd916afcfe5c",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0pm77byqv3l42jfa8f26abl0k2m32a76jgjw70vsn499s3r7y448",
+    "sha256": "00bw5lbpqddzfggw41bpzc987l6wb0dprn1dwwfj98d5z2lkd42d",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
