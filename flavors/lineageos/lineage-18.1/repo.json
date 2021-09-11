@@ -4183,9 +4183,9 @@
   },
   "frameworks/base": {
     "groups": [],
-    "rev": "6ff4169c8934cef4cb334c532cf8be94813778aa",
+    "rev": "b8acf5c6e2a0b5951c1b44fa4b4cef1548bfb30f",
     "revisionExpr": "lineage-18.1",
-    "sha256": "13y6mbbbab6z2knlgimc73qhr6b5fvkb0q2nhnl8spka1dmnscxn",
+    "sha256": "01cd5i0dq9i2zs8dvlkm34mcbfmpnzjysfg0y4lwh9bgd9xrzyy7",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -5596,9 +5596,9 @@
   },
   "hardware/samsung": {
     "groups": [],
-    "rev": "7cce6385ecdd259a50e6b46970ee558fc8d470c7",
+    "rev": "538dcfca261e3a2eb0dc7d606f85b8d7dc7d2653",
     "revisionExpr": "lineage-18.1",
-    "sha256": "04d63v3hf1qfnd1hk6gi14jx2ahm4r4vw3x9xc4wc18vkviy73pb",
+    "sha256": "0xd5q3k5m730hfj0f3lp2p02sxrj44br461rxn547i09a2byghmn",
     "url": "https://github.com/LineageOS/android_hardware_samsung"
   },
   "hardware/sony/timekeep": {
@@ -6330,9 +6330,9 @@
   },
   "packages/apps/Settings": {
     "groups": [],
-    "rev": "1e2351283c31f3f0927ec5c47764247a7335875e",
+    "rev": "649bf2460023d3f555ad128644434bd5fcae4d40",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1wfjrspp5v3apf7qfskmh3nb29lmarnzqxvd89msdqn88b070paj",
+    "sha256": "1j6xqzb67qa69ccxglib80mn0spj9qg3vmnbssh68hrsrn8gcjg7",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
@@ -8399,9 +8399,9 @@
   },
   "vendor/lineage": {
     "groups": [],
-    "rev": "ca9f355f3ea63a07bf958f0043dccd916afcfe5c",
+    "rev": "bbe304dff59e7c97db6342a84f4e0a2904f408db",
     "revisionExpr": "lineage-18.1",
-    "sha256": "00bw5lbpqddzfggw41bpzc987l6wb0dprn1dwwfj98d5z2lkd42d",
+    "sha256": "16vqnc1l4ghj7qy3bha2ybj46kywaf635124srinswq4fxxpli4b",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
