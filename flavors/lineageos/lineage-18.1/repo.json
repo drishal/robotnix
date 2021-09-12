@@ -1,9 +1,10 @@
 {
   "android": {
+    "dateTime": 1631104939,
     "groups": [],
-    "rev": "eac253c35ae1095c4a257cf970aeede7bb1d4e69",
+    "rev": "056dae6dcf8b976ae0f2eb7c6b59b4ade33eae47",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0fm6jia6d38fdfi8mw7vlhr7byq14dfhzmfgzcqkqrpvr8zqz40v",
+    "sha256": "1py3ip9c53clywb009bjrgc1y29fa8zp6v62h13imhh412nmigrs",
     "url": "https://github.com/LineageOS/android"
   },
   "art": {
@@ -4182,10 +4183,11 @@
     "url": "https://github.com/ForkLineageOS/android_frameworks_av"
   },
   "frameworks/base": {
+    "dateTime": 1631470851,
     "groups": [],
-    "rev": "b8acf5c6e2a0b5951c1b44fa4b4cef1548bfb30f",
+    "rev": "57e603156feb1b130b8a20072383fdc9d0b1207d",
     "revisionExpr": "lineage-18.1",
-    "sha256": "01cd5i0dq9i2zs8dvlkm34mcbfmpnzjysfg0y4lwh9bgd9xrzyy7",
+    "sha256": "0ylwzr5cn6fr3dd6pgm7qjdcz6nsxxc6znd9n8vqb6vkwfldxf38",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -5027,25 +5029,39 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_media"
   },
   "hardware/qcom-caf/msm8996/audio": {
-    "groups": [],
-    "rev": "876da396296dfb6e34e8b38c0d94298d2befd6ba",
-    "revisionExpr": "eleven-caf-msm8996",
-    "sha256": "015w16j3z65ijhn0hcnna55zhvx3kp6xy8b5zjslakr682vqr81i",
-    "url": "https://github.com/smokey18/hardware_qcom_audio"
+    "dateTime": 1628512880,
+    "groups": [
+      "pdk-qcom",
+      "qcom",
+      "qcom_audio"
+    ],
+    "rev": "e23830480f7c868f9e07798662a11e1cb5f74bd7",
+    "revisionExpr": "eleven",
+    "sha256": "0n94410hxb910jb53hpwrrnnkkbl9di31a89fmqm5z15r5xiky2i",
+    "url": "https://github.com/PixelExperience/hardware_qcom-caf_msm8996-r_audio"
   },
   "hardware/qcom-caf/msm8996/display": {
-    "groups": [],
-    "rev": "7827cbdaf80ea4251431c3015c5e02d3cb97e099",
-    "revisionExpr": "eleven-caf-msm8996",
-    "sha256": "0yal810x0f631ihh0v7bkrs1y8slbzadjb1scphjwlkq92lnjbqw",
-    "url": "https://github.com/smokey18/hardware_qcom_display"
+    "dateTime": 1619099255,
+    "groups": [
+      "pdk-qcom",
+      "qcom",
+      "qcom_display"
+    ],
+    "rev": "6f637101ac7e4e1af13e78d4888af50ac7989dbc",
+    "revisionExpr": "eleven",
+    "sha256": "0jrb1rbayh7bgwqvngxcsiwx193nc8nqkvvzrai2z7j3j202g7nm",
+    "url": "https://github.com/PixelExperience/hardware_qcom-caf_msm8996-r_display"
   },
   "hardware/qcom-caf/msm8996/media": {
-    "groups": [],
-    "rev": "e1617131c1f91355d8c3699ffb9ce4aaae7c1aa7",
-    "revisionExpr": "eleven-caf-msm8996",
-    "sha256": "04afs7h7ixr57pnbcygwsib5rnpfybyqlk0wv58rr4ibcngrg2l7",
-    "url": "https://github.com/smokey18/hardware_qcom_media"
+    "dateTime": 1619078523,
+    "groups": [
+      "pdk-qcom",
+      "qcom"
+    ],
+    "rev": "a568ae595355257bc04045e8a424ec6d09049681",
+    "revisionExpr": "eleven",
+    "sha256": "05hnn7b3wwrc6w7axavxkv3wjy4wr2bn1392idasqpr9ifh2vclx",
+    "url": "https://github.com/PixelExperience/hardware_qcom-caf_msm8996-r_media"
   },
   "hardware/qcom-caf/msm8998/audio": {
     "groups": [
@@ -5638,6 +5654,14 @@
     "tree": "c3609901810c5636883da56924cb5c7dfe4a2102",
     "url": "https://android.googlesource.com/platform/hardware/ti/am57x"
   },
+  "hardware/xiaomi": {
+    "dateTime": 1624458992,
+    "groups": [],
+    "rev": "d865b86327017fcc5be6658943f38163eb5e2c1f",
+    "revisionExpr": "lineage-18.1",
+    "sha256": "0iw5naadbybiq3nwqipvppwim1zhrykld7mz3vmiz09a0fh1l3x2",
+    "url": "https://github.com/LineageOS/android_hardware_xiaomi"
+  },
   "kernel/configs": {
     "groups": [
       "pdk",
@@ -6038,10 +6062,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_CertInstaller"
   },
   "packages/apps/Contacts": {
+    "dateTime": 1631465914,
     "groups": [],
-    "rev": "cb37a79f051bded9993866027ec70db4910ccb36",
+    "rev": "835a5186c6cbfc5cdcc38a26082b1c9423c3fe6d",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0kv32l4361rliq0wbqryjjn4mixai9nfdlbg9mr7yg40p0xag1g0",
+    "sha256": "02val7brz4ilb7prca79l4bndv267fkwzdyi0syyqrp4y6rgdif5",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Contacts"
   },
   "packages/apps/DeskClock": {
@@ -6322,17 +6347,19 @@
     "url": "https://github.com/LineageOS/android_packages_apps_SecureElement"
   },
   "packages/apps/Seedvault": {
+    "dateTime": 1631471660,
     "groups": [],
-    "rev": "87352c8e47e44fd3b04b25f24e925a3afece7b66",
+    "rev": "ec1120d37d870424b49a87914e7724bf87e7cc5d",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0nd5scr5sngaz4kq62c6ycar1i7wjmzd6dpnaywn4llj7faqmi4p",
+    "sha256": "0ylm8k3q9i6d68skpqqzw88vwpvd3dcyig7l0m0qmyl1f404s06l",
     "url": "https://github.com/LineageOS/android_packages_apps_Seedvault"
   },
   "packages/apps/Settings": {
+    "dateTime": 1631448376,
     "groups": [],
-    "rev": "649bf2460023d3f555ad128644434bd5fcae4d40",
+    "rev": "983a4f1a712b66718dd7093a41ad19079d752ac9",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1j6xqzb67qa69ccxglib80mn0spj9qg3vmnbssh68hrsrn8gcjg7",
+    "sha256": "0qidhwbffvpzqlh5l1q4g3dkmrb3w7qkc4xj5858s1sdv5m64lni",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
@@ -8398,10 +8425,11 @@
     "url": "https://gitlab.com/arrowos-project/android_vendor_gapps"
   },
   "vendor/lineage": {
+    "dateTime": 1631433762,
     "groups": [],
-    "rev": "bbe304dff59e7c97db6342a84f4e0a2904f408db",
+    "rev": "c0499a2fb98a45fe3d89658fff5f6ba18f4771d6",
     "revisionExpr": "lineage-18.1",
-    "sha256": "16vqnc1l4ghj7qy3bha2ybj46kywaf635124srinswq4fxxpli4b",
+    "sha256": "1g3mkijvc84qcmnql17h09pxzi4vix4qj0a004nwinjq0cds4gpg",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
@@ -8521,13 +8549,14 @@
     "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_packages_apps_Bluetooth"
   },
   "vendor/qcom/opensource/commonsys/system/bt": {
+    "dateTime": 1631109745,
     "groups": [
       "pdk-qcom",
       "qcom"
     ],
-    "rev": "e366ce922fd19c85b146a59d1f3e87834cbbc5d2",
+    "rev": "19a4d6bbdcadef4add0416d72ae17a5f7d82026f",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1xyf83gcxxpqndl6vj2ac05diq2jbcbpa8fgzrd3bgmki1cnm65n",
+    "sha256": "1a1h4iqgljkfr1w6nfaqjmm0d2782icyy6x4gasni4h2i1hmygdi",
     "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_system_bt"
   },
   "vendor/qcom/opensource/cryptfs_hw": {
