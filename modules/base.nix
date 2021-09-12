@@ -106,21 +106,22 @@ in
       type = types.str;
       description = ''
         Set this to something meaningful to identify the build.
-        Defaults to `YYYY.MM.DD.HH` based on `buildDateTime`.
-        Should be unique for each build used for disambiguation.
+        Defaults to `YYYYMMDDHH` based on `buildDateTime`.
+        Should be unique for each build for disambiguation.
       '';
       example = "201908121";
     };
 
     buildDateTime = mkOption {
-      default = 1;
       type = types.int;
       description = ''
-        Seconds since the epoch that this build is taking place.
+        Unix time (seconds since the epoch) that this build is taking place.
         Needs to be monotonically increasing for each build if you use the over-the-air (OTA) update mechanism.
         e.g. output of `date +%s`
         '';
       example = 1565645583;
+      default = with lib; foldl' max 1 (mapAttrsToList (n: v: if v.enable then v.dateTime else 1) config.source.dirs);
+      defaultText = "*maximum of source.dirs.<name>.dateTime*";
     };
 
     androidVersion = mkOption {
