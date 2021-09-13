@@ -5767,21 +5767,23 @@
     "url": "https://github.com/LineageOS/cve_tracker"
   },
   "lineage/hudson": {
+    "dateTime": 1631558932,
     "groups": [
       "infra"
     ],
-    "rev": "a5379f3a5fb78fafb97be84e24a2a82de3db5666",
+    "rev": "a40487a397e5a103962ead28bf7ab99569609d56",
     "revisionExpr": "master",
-    "sha256": "1lix56q86vkahk530afhycb9j9k249zsjlpfab7s093dhd7rqvrq",
+    "sha256": "0i15dgjhx9ncnd5nzp42rr7syxvzl789q0zi3dhspxxi9sqcam0p",
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
+    "dateTime": 1631537550,
     "groups": [
       "infra"
     ],
-    "rev": "b341340fe07dbaeb720d5b59639cd65b7737b65d",
+    "rev": "54a452002fcd593ed76e97c21f500954aaf8350f",
     "revisionExpr": "master",
-    "sha256": "1d7hif11dx08cyy41vr6d5rcc2ar85l9gb443i5pgyg0zlvk1srz",
+    "sha256": "0rxcn8whzgzif77bx2mdb35pxpjilgd8zz2xjcmba7rikydwwsx1",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
@@ -5814,12 +5816,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
+    "dateTime": 1631558978,
     "groups": [
       "infra"
     ],
-    "rev": "9acc60fff5b0047fcca98cfab0a960248536ad78",
+    "rev": "70de6d5e700faf0a507e1aa5c82af71d31971876",
     "revisionExpr": "master",
-    "sha256": "07yr8gsx6jwp2xfa7gwjjms89vdnvr8jl5xxv9sn4q3k5k6n2md0",
+    "sha256": "150zysygrvdm9iapz3k8a6lp0x6b8vcydxs93lyfs2ywvw2h43i8",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -8270,10 +8273,11 @@
     "url": "https://android.googlesource.com/platform/tools/external_updater"
   },
   "tools/extract-utils": {
+    "dateTime": 1631194802,
     "groups": [],
-    "rev": "72d5bdfb73ca80089af4f243c252ecde210d357f",
+    "rev": "8b335032f49a2a9bbd6ea7ff76a91a91d83a7006",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1a868xh2amjbvn7kp47fxipk7rm008ag03yy5j5prakplnhizvbr",
+    "sha256": "15czmr9ircbw3dqh7g81wzbm4hm1w0yka4gfcf9qx34xlk8x6xfz",
     "url": "https://github.com/LineageOS/android_tools_extract-utils"
   },
   "tools/loganalysis": {
