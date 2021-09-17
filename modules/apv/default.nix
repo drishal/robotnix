@@ -15,11 +15,12 @@ let
 
   configFile = "${android-prepare-vendor.evalTimeSrc}/${config.device}/config.json";
   apvConfig = builtins.fromJSON (builtins.readFile configFile);
+  replacedApvConfig = lib.recursiveUpdate apvConfig config.apv.customConfig;
 
   # TODO: There's probably a better way to do this
-  mergedConfig = lib.recursiveUpdate apvConfig {
+  mergedConfig = lib.recursiveUpdate replacedApvConfig {
     "api-${apiStr}".naked = let
-      _config = apvConfig."api-${apiStr}".naked;
+      _config = replacedApvConfig."api-${apiStr}".naked;
     in _config // {
       system-bytecode = _config.system-bytecode ++ cfg.systemBytecode;
       # We don't use the apns-conf.xml generator currently
@@ -101,6 +102,13 @@ in
       type = types.str;
       description = "Build ID associated with the upstream img/ota (used to select images)";
     };
+
+    customConfig = mkOption {
+      type = types.attrs;
+      default = {};
+      internal = true;
+      description = "Replacement apv JSON to use instead of upstream";
+    };
   };
 
   config = {
@@ -172,28 +180,18 @@ in
 
       # For debugging differences between upstream vendor files and ours
       diff = let
-          builtVendor = unpackImg config.build.factoryImg;
-        in pkgs.runCommand "vendor-diff" { nativeBuildInputs = [ pkgs.binutils ]; } ''
-          mkdir -p $out
-          ln -s ${config.build.apv.unpackedImg} $out/upstream
-          ln -s ${builtVendor} $out/built
+        unpackedUpstream = pkgs.robotnix.unpackImg config.apv.img;
+        unpackedBuilt = pkgs.robotnix.unpackImg config.build.factoryImg;
+      in pkgs.runCommand "apv-diff" { nativeBuildInputs = [ pkgs.binutils ]; } ''
+        mkdir -p $out
+        ln -s ${unpackedUpstream} $out/upstream
+        ln -s ${unpackedBuilt} $out/built
 
-          function diff_partition() {
-            local partition=$1
-            if [[ -d ${config.build.apv.unpackedImg}/$partition ]]; then
-              find ${config.build.apv.unpackedImg}/$partition -printf "%P\n" | sort > $out/$partition.upstream
-              find ${builtVendor}/$partition -printf "%P\n" | sort > $out/$partition.built
-              diff -u $out/$partition.upstream $out/$partition.built > $out/$partition.diff || true
-            fi
-          }
-
-          diff_partition "vendor"
-          diff_partition "system_ext"
-          diff_partition "system"
-          diff_partition "product"
-
-          bash ${./apv-lib-check.sh} $out/built $out/upstream | sort > $out/shared-libs-report.txt
-        '';
+        find ${unpackedUpstream} -type f -printf "%P\n" | sort > $out/upstream-files
+        find ${unpackedBuilt} -type f -printf "%P\n" | sort > $out/built-files
+        diff -u $out/upstream-files $out/built-files > $out/diff || true
+      '';
+        #bash ${./apv-lib-check.sh} $out/built-files $out/upstream-files | sort > $out/shared-libs-report.txt
     };
 
     # TODO: Re-add support for vendor_overlay if it is ever used again

@@ -49,7 +49,7 @@ let
       ./modules/apps/prebuilt.nix
       ./modules/apps/seedvault.nix
       ./modules/apps/updater.nix
-      ./modules/apv.nix
+      ./modules/apv
       ./modules/assertions.nix
       ./modules/base.nix
       ./modules/emulator.nix
@@ -60,6 +60,7 @@ let
       ./modules/kernel.nix
       ./modules/microg.nix
       ./modules/pixel
+      ./modules/pixel/driver-binaries.nix
       ./modules/release.nix
       ./modules/resources.nix
       ./modules/signing.nix
