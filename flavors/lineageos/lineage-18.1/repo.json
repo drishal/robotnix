@@ -4183,11 +4183,11 @@
     "url": "https://github.com/ForkLineageOS/android_frameworks_av"
   },
   "frameworks/base": {
-    "dateTime": 1631470851,
+    "dateTime": 1631811211,
     "groups": [],
-    "rev": "57e603156feb1b130b8a20072383fdc9d0b1207d",
+    "rev": "e30e63c72f01e07fbc52e4e7eb74d7f21f16b9d7",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0ylwzr5cn6fr3dd6pgm7qjdcz6nsxxc6znd9n8vqb6vkwfldxf38",
+    "sha256": "15mk64nkqk2bzp5dy7jma0hkns5ghwvw9ca5k2ljv33ljgq63ybv",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -5767,13 +5767,13 @@
     "url": "https://github.com/LineageOS/cve_tracker"
   },
   "lineage/hudson": {
-    "dateTime": 1631613791,
+    "dateTime": 1631807369,
     "groups": [
       "infra"
     ],
-    "rev": "88cde4f155958bcbe238327671012fdcd428ded8",
+    "rev": "6b41ac97f8b01ab6f653e97a0a577bb166fa9836",
     "revisionExpr": "master",
-    "sha256": "0bxiczkckc088spirq6rn15xf5rr5md7vrkbaxkn6v9qdxzam1i7",
+    "sha256": "1n5z9564f0yyj2kczglff2sqq4acyrqv4lc95w8ilg7krg17kcp3",
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
@@ -5816,13 +5816,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1631648297,
+    "dateTime": 1631807363,
     "groups": [
       "infra"
     ],
-    "rev": "06baae94fcabb6d9d89ffacb8f183da9b1d09878",
+    "rev": "c8379c7510cb06c0f7898cdadf771f8f1ec4b33e",
     "revisionExpr": "master",
-    "sha256": "0p519kvnrxyhrd06mnxjcv8wri8h0691mvbzb28wv88kxmmn99vc",
+    "sha256": "1pynxkxcb4rn0asi8ly531zfscbv8cia55f63vry8ps69vrldz7b",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -6358,11 +6358,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_Seedvault"
   },
   "packages/apps/Settings": {
-    "dateTime": 1631448376,
+    "dateTime": 1631812678,
     "groups": [],
-    "rev": "983a4f1a712b66718dd7093a41ad19079d752ac9",
+    "rev": "72461b68fb129d7cfaa1d2a39b925fff87cf2346",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0qidhwbffvpzqlh5l1q4g3dkmrb3w7qkc4xj5858s1sdv5m64lni",
+    "sha256": "0dgksczni9apdc82hvba6samp6wq6i78dpr8w7kv398d8d5dvg86",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
@@ -6476,13 +6476,13 @@
     "url": "https://github.com/LineageOS/android_packages_apps_Traceur"
   },
   "packages/apps/TvSettings": {
-    "dateTime": 1630682641,
+    "dateTime": 1631738916,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "a2d9da395202561cf01e191feec53c88ef85dd50",
+    "rev": "d0b76903b8928f343339f7778cd5066861b2540b",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0h161x49nsxq3s49byzj33z13cka49djlzd80rlpnz94f1migm5c",
+    "sha256": "1lfa36yp6janpb9958rp0jnx0hnb4qniqryc3lmif8zx5d1z9vs8",
     "url": "https://github.com/LineageOS/android_packages_apps_TvSettings"
   },
   "packages/apps/UniversalMediaPlayer": {
@@ -7020,10 +7020,11 @@
     "url": "https://android.googlesource.com/platform/prebuilts/clang/host/darwin-x86"
   },
   "prebuilts/clang/host/linux-x86": {
+    "dateTime": 1631700448,
     "groups": [],
-    "rev": "a6b5650f9015b08aacc62886ef1f115e3f7dfcf6",
+    "rev": "a78146829915a39847c44ff47055336d5e1a7f69",
     "revisionExpr": "r",
-    "sha256": "0kfkniq83x4y3z96whs91c77a8wqyvpv0irsbwggv7mpiar6vapf",
+    "sha256": "16j2g383v6m10iil17ifpsdhnz3fck94rfqsq9zqgskka7b2hkdf",
     "url": "https://github.com/Wave-Project/prebuilts_clang_host_linux-x86"
   },
   "prebuilts/clang/host/linux-x86/clang-proton": {
@@ -8431,11 +8432,11 @@
     "url": "https://gitlab.com/arrowos-project/android_vendor_gapps"
   },
   "vendor/lineage": {
-    "dateTime": 1631637076,
+    "dateTime": 1631721147,
     "groups": [],
-    "rev": "da839db385992556db8470b66f4485eea8607c37",
+    "rev": "5c40c0de2555220d5499a60feacf6becdcc2f769",
     "revisionExpr": "lineage-18.1",
-    "sha256": "02kg8hx324qbsbx9kz0rq349j215qnc5ihq7zrwfi25nw4388kn1",
+    "sha256": "04fdagsqk8q5ym1wr4y0gjnavva7kgddxjlbjg476r8194ygshj7",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
