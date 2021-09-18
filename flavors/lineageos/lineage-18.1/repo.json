@@ -917,12 +917,13 @@
     "url": "https://android.googlesource.com/platform/external/chromium-trace"
   },
   "external/chromium-webview": {
+    "dateTime": 1631794872,
     "groups": [
       "pdk"
     ],
-    "rev": "b58d049a87f73853a1673e440f5efcffa9f8a7cd",
+    "rev": "42b388aea850bc00ccbf07219385c0229bfe6980",
     "revisionExpr": "master",
-    "sha256": "1df6bzqmqzrg0m93zp73q0nmzqc9n28pkvmznaiz4f68gxs5gw52",
+    "sha256": "0ikq1v0nndyqxmphbf1f5xabgy2rn3nz9mzjx0dqpliy5152ndch",
     "url": "https://github.com/LineageOS/android_external_chromium-webview"
   },
   "external/clang": {
@@ -4183,11 +4184,11 @@
     "url": "https://github.com/ForkLineageOS/android_frameworks_av"
   },
   "frameworks/base": {
-    "dateTime": 1631811211,
+    "dateTime": 1631899516,
     "groups": [],
-    "rev": "e30e63c72f01e07fbc52e4e7eb74d7f21f16b9d7",
+    "rev": "9ce6b21423046cae392787d5cc1a88bb43389599",
     "revisionExpr": "lineage-18.1",
-    "sha256": "15mk64nkqk2bzp5dy7jma0hkns5ghwvw9ca5k2ljv33ljgq63ybv",
+    "sha256": "1h8mf88a4gxr6gnx5r81c0vfp5m26dzjgwrpbayibva6x0ac1sfk",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -5611,10 +5612,11 @@
     "url": "https://github.com/ForkLineageOS/android_hardware_ril"
   },
   "hardware/samsung": {
+    "dateTime": 1631981000,
     "groups": [],
-    "rev": "538dcfca261e3a2eb0dc7d606f85b8d7dc7d2653",
+    "rev": "ae574f353d89633f07cfc9cc48f955a7590d0c1a",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0xd5q3k5m730hfj0f3lp2p02sxrj44br461rxn547i09a2byghmn",
+    "sha256": "1y1ck06xs2mnhbxs4rk1b70av15nxsqa4diy5j6gnnmi2hfjz0gq",
     "url": "https://github.com/LineageOS/android_hardware_samsung"
   },
   "hardware/sony/timekeep": {
@@ -5767,13 +5769,13 @@
     "url": "https://github.com/LineageOS/cve_tracker"
   },
   "lineage/hudson": {
-    "dateTime": 1631807369,
+    "dateTime": 1631899862,
     "groups": [
       "infra"
     ],
-    "rev": "6b41ac97f8b01ab6f653e97a0a577bb166fa9836",
+    "rev": "c651ff6205b3e5a528ef6fb30f5421a1409de6c6",
     "revisionExpr": "master",
-    "sha256": "1n5z9564f0yyj2kczglff2sqq4acyrqv4lc95w8ilg7krg17kcp3",
+    "sha256": "0wcaj4iwjzvcw5a7zaz3dfnh428hsndxznwcgphir4c8y663ssi3",
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
@@ -5787,12 +5789,13 @@
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
+    "dateTime": 1631739072,
     "groups": [
       "tools"
     ],
-    "rev": "1e7d54645f87ea3e67e218ebc52cec12a98ffee3",
+    "rev": "9c8e617d3666ab0216e6248b395c7e0ab6164ba5",
     "revisionExpr": "master",
-    "sha256": "0cc69cwsnjnrz33r92djl1zx10jyjpa1lcc9hchkmi0xdn7n5m2z",
+    "sha256": "06lcchpl7x6ji4dyff2pq58l3cs0mbikg51xnyn1qa87i253wdqf",
     "url": "https://github.com/LineageOS/scripts"
   },
   "lineage/slackbot": {
@@ -5816,13 +5819,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1631807363,
+    "dateTime": 1631898313,
     "groups": [
       "infra"
     ],
-    "rev": "c8379c7510cb06c0f7898cdadf771f8f1ec4b33e",
+    "rev": "15a8f7abc04698f985fc966c4036337d10ed7d71",
     "revisionExpr": "master",
-    "sha256": "1pynxkxcb4rn0asi8ly531zfscbv8cia55f63vry8ps69vrldz7b",
+    "sha256": "08ad3q8xsgc85bzcahci6xh0k2jslzlqd3swgkal7hdk1lydr3wr",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -6358,11 +6361,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_Seedvault"
   },
   "packages/apps/Settings": {
-    "dateTime": 1631812678,
+    "dateTime": 1631899588,
     "groups": [],
-    "rev": "72461b68fb129d7cfaa1d2a39b925fff87cf2346",
+    "rev": "6dc081a64e249522493c80128aa9703cac53b1e3",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0dgksczni9apdc82hvba6samp6wq6i78dpr8w7kv398d8d5dvg86",
+    "sha256": "0hmf46lljdmh9lsxsaym09k7xk1w2invdrvx3jmbaycczm4q09lp",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
@@ -6855,13 +6858,14 @@
     "url": "https://android.googlesource.com/platform/packages/services/Mtp"
   },
   "packages/services/Telecomm": {
+    "dateTime": 1631639242,
     "groups": [
       "pdk-cw-fs",
       "pdk-fs"
     ],
-    "rev": "f29f7da4c41a9722d94bca9871d0285b1e2fb51f",
+    "rev": "f6a5bf73b6515c380ebba8d796efe808723f0851",
     "revisionExpr": "lineage-18.1",
-    "sha256": "025h15n7q8sz4b4s6zsq35a55q50n6kfr7835gi14wg2lxl4v6vp",
+    "sha256": "1xfg6wgphkm2cvpyyr26lb56kb27ks60lix6xx63p814kh3kqrnx",
     "url": "https://github.com/ForkLineageOS/android_packages_services_Telecomm"
   },
   "packages/services/Telephony": {
