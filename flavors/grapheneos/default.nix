@@ -30,8 +30,8 @@ in mkIf (config.flavor == "grapheneos") (mkMerge [
 
   apv.enable = mkIf (elem config.deviceFamily phoneDeviceFamilies) (mkDefault true);
   apv.buildID = mkMerge [
-    (mkIf (config.device != "barbet") (mkDefault "RQ3A.210905.001"))
-    (mkIf (config.device == "barbet") (mkDefault "RD2A.210905.003"))
+    (mkIf (config.device != "barbet") (mkDefault "RQ3A.211001.001"))
+    (mkIf (config.device == "barbet") (mkDefault "RD2A.211001.002"))
   ];
 
   # Not strictly necessary for me to set these, since I override the source.dirs above
@@ -83,6 +83,11 @@ in mkIf (config.flavor == "grapheneos") (mkMerge [
   nixpkgs.overlays = [ (self: super: {
     android-prepare-vendor = super.android-prepare-vendor.overrideAttrs (_: {
       src = config.source.dirs."vendor/android-prepare-vendor".src;
+      patches = [
+        ./apv/0001-Just-write-proprietary-blobs.txt-to-current-dir.patch
+        ./apv/0002-Allow-for-externally-set-config-file.patch
+        ./apv/0003-Add-option-to-use-externally-provided-carrier_list.p.patch
+      ];
       passthru.evalTimeSrc = builtins.fetchTarball {
         url = "https://github.com/GrapheneOS/android-prepare-vendor/archive/${config.source.dirs."vendor/android-prepare-vendor".rev}.tar.gz";
         inherit (config.source.dirs."vendor/android-prepare-vendor") sha256;

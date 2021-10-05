@@ -1,7 +1,7 @@
-From af75ce11426e321a007dfa451b202e714170262f Mon Sep 17 00:00:00 2001
+From 524bfc3d962c2a2dc4c44acf07ed2656cb799d27 Mon Sep 17 00:00:00 2001
 From: Daniel Fullmer <danielrf12@gmail.com>
 Date: Fri, 6 Sep 2019 16:59:30 -0400
-Subject: [PATCH 2/4] Just write proprietary-blobs.txt to current dir
+Subject: [PATCH 1/3] Just write proprietary-blobs.txt to current dir
 
 ---
  execute-all.sh             | 2 +-
@@ -9,31 +9,31 @@ Subject: [PATCH 2/4] Just write proprietary-blobs.txt to current dir
  2 files changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/execute-all.sh b/execute-all.sh
-index aefe810..da22db5 100755
+index 4a1e0ad..08ce5ed 100755
 --- a/execute-all.sh
 +++ b/execute-all.sh
-@@ -646,7 +646,7 @@ echo "[*] Processing with 'API-$API_LEVEL $CONFIG_TYPE' configuration"
+@@ -426,7 +426,7 @@ echo "[*] Processing configuration"
  
  # Generate unified readonly "proprietary-blobs.txt"
  $GEN_BLOBS_LIST_SCRIPT --input "$FACTORY_IMGS_DATA/vendor" \
 -    --output "$SCRIPTS_ROOT/$DEVICE" \
 +    --output . \
-     --api "$API_LEVEL" \
-     --conf-file "$CONFIG_FILE" \
-     --conf-type "$CONFIG_TYPE" || {
+     --conf-file "$CONFIG_FILE" || {
+   echo "[-] 'proprietary-blobs.txt' generation failed"
+   abort 1
 diff --git a/scripts/generate-vendor.sh b/scripts/generate-vendor.sh
-index 32b2185..d30e728 100755
+index 5274295..2dd531c 100755
 --- a/scripts/generate-vendor.sh
 +++ b/scripts/generate-vendor.sh
-@@ -1279,7 +1279,7 @@ isValidApiLevel "$API_LEVEL"
+@@ -1245,7 +1245,7 @@ check_file "$CONFIG_FILE" "Device Config File"
  
  # Populate config files from base conf dir
  readonly DEVICE_CONFIG_DIR="$(dirname "$CONFIG_FILE")"
 -readonly BLOBS_LIST="$DEVICE_CONFIG_DIR/proprietary-blobs.txt"
 +readonly BLOBS_LIST="./proprietary-blobs.txt"
  readonly OVERLAYS_DIR="$(setOverlaysDir)"
- readonly RRO_OVERLAYS="$(jqIncRawArray "$API_LEVEL" "$CONFIG_TYPE" "rro-overlays" "$CONFIG_FILE")"
- readonly DEP_DSO_BLOBS_LIST="$(jqIncRawArray "$API_LEVEL" "$CONFIG_TYPE" "dep-dso" "$CONFIG_FILE" | grep -Ev '(^#|^$)')"
+ readonly RRO_OVERLAYS="$(jqIncRawArray "rro-overlays" "$CONFIG_FILE")"
+ readonly DEP_DSO_BLOBS_LIST="$(jqIncRawArray "dep-dso" "$CONFIG_FILE" | grep -Ev '(^#|^$)')"
 -- 
 2.32.0
 

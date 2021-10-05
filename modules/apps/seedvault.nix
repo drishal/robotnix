@@ -34,10 +34,10 @@ in
   (mkIf (config.androidVersion >= 11) {
     # For android 11, just use the source tree from upstream, and have soong build it
     source.dirs."robotnix/seedvault".src = pkgs.fetchFromGitHub {
-      owner = "stevesoltys";
+      owner = "seedvault-app";
       repo = "seedvault";
-      rev = "11-1.1"; # 2021-04-17
-      sha256 = "1mxa1b37vvwldxjbgzg5nvy5xha5p38q6bs24cjmq64hln8hhl2n";
+      rev = "11-2.3"; # 2021-10-04
+      sha256 = "0blqjm5zamam1imzgpkwyvg6n6c2aa9cj5kvcjj44a9glyyqqmry";
     };
 
     product.additionalProductPackages = [ "Seedvault" ];
