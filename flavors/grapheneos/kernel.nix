@@ -4,12 +4,22 @@ let
   inherit (lib)
     mkIf mkMerge mkDefault;
 
-  clangVersion = "r383902";
+  # TODO: Temporary workaround for GrapheneOS 2021100606
+  android12SourceDirs = (import ../../default.nix {
+    inherit pkgs;
+    configuration = {
+      source.dirs = lib.importJSON ./repo-android-12.0.0_r2.json;
+    };
+  }).config.source.dirs;
+
+  clangVersion = "r416183b";
   postRedfin = lib.elem config.deviceFamily [ "redfin" "barbet" ];
 
   dependencies = let
     fixupRepo = repoName: { buildInputs ? [], ... }@args: pkgs.stdenv.mkDerivation ({
       name = lib.strings.sanitizeDerivationName repoName;
+      # TODO: Temporary workaround for GrapheneOS 2021100606
+      #src = android12SourceDirs.${repoName}.src;
       src = config.source.dirs.${repoName}.src;
       buildInputs = with pkgs; buildInputs ++ [ autoPatchelfHook ];
       installPhase = ''
@@ -23,11 +33,13 @@ let
     "prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" = { buildInputs = with pkgs; [ python ]; };
     "prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" = { buildInputs = with pkgs; [ python ]; };
     "prebuilts/clang/host/linux-x86/clang-${clangVersion}"= {
-      src = config.source.dirs."prebuilts/clang/host/linux-x86".src + "/clang-${clangVersion}";
+      # TODO: Temporary workaround for GrapheneOS 2021100606
+      src = android12SourceDirs."prebuilts/clang/host/linux-x86".src + "/clang-${clangVersion}";
+      # src = config.source.dirs."prebuilts/clang/host/linux-x86".src + "/clang-${clangVersion}";
       buildInputs = with pkgs; [
         zlib ncurses5 libedit
         stdenv.cc.cc.lib # For libstdc++.so.6
-        python38 # LLDB links against this particular version of python
+        python39 # LLDB links against this particular version of python
       ];
       postPatch = ''
         rm -r python3
@@ -35,21 +47,28 @@ let
     };
     "prebuilts/gas/linux-x86" = {};
     "prebuilts/misc/linux-x86" = {
-      src = config.source.dirs."prebuilts/misc".src + "/linux-x86";
+      # TODO: Temporary workaround for GrapheneOS 2021100606
+      src = android12SourceDirs."prebuilts/misc".src + "/linux-x86";
+      #src = config.source.dirs."prebuilts/misc".src + "/linux-x86";
       buildInputs = with pkgs; [ python ];
     };
     "kernel/prebuilts/build-tools" = {
+      # TODO: Temporary workaround for GrapheneOS 2021100606
+      src = config.source.dirs."kernel/prebuilts/build-tools".src;
       buildInputs = with pkgs; [ python ];
       postInstall = ''
         # Workaround for patchelf not working with embedded python interpreter
-        cp ${config.source.dirs."system/libufdt".src}/utils/src/mkdtboimg.py $out/linux-x86/bin
+        # TODO: Temporary workaround for GrapheneOS 2021100606
+        cp ${android12SourceDirs."system/libufdt".src}/utils/src/mkdtboimg.py $out/linux-x86/bin
       '';
+        # cp ${config.source.dirs."system/libufdt".src}/utils/src/mkdtboimg.py $out/linux-x86/bin
     };
   });
 
   repoName = {
     "sargo" = "crosshatch";
     "bonito" = "crosshatch";
+    "sunfish" = "coral";
     "bramble" = "redbull";
     "redfin" = "redbull";
   }.${config.device} or config.deviceFamily;
@@ -58,6 +77,7 @@ let
   builtKernelName = {
     "sargo" = "bonito";
     "flame" = "coral";
+    "sunfish" = "coral";
   }.${config.device} or config.device;
   builtRelpath = "device/google/${builtKernelName}-kernel";
 
@@ -109,7 +129,7 @@ let
 
     # Useful to use upstream's build.sh to catch regressions if any dependencies change
     buildPhase = let
-      useCodenameArg = lib.elem config.deviceFamily [ "bonito" "crosshatch" "redfin" "barbet" ];
+      useCodenameArg = true;
     in ''
       mkdir -p ../../../${builtRelpath}
       bash ./build.sh ${lib.optionalString useCodenameArg builtKernelName}
