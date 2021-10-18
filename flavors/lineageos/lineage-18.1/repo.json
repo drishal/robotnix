@@ -721,9 +721,9 @@
       "pdk"
     ],
     "rev": "7c5132348d0eb21ea84dfcf5fef7bdf9a6c3cc4c",
-    "revisionExpr": "r",
+    "revisionExpr": "lineage-18.1",
     "sha256": "005srx86l0mfhf35s35q4mcz8pxl3gnvjz8vbfwbq286nj12jnm0",
-    "url": "https://github.com/Wave-Project/external_arm-optimized-routines"
+    "url": "https://github.com/ForkLineageOS/external_arm-optimized-routines"
   },
   "external/arm-trusted-firmware": {
     "groups": [
@@ -988,9 +988,9 @@
   "external/cpu_features": {
     "groups": [],
     "rev": "83907935454a2a32e4ba152487bba11c68448d64",
-    "revisionExpr": "refs/heads/r",
+    "revisionExpr": "refs/heads/lineage-18.1",
     "sha256": "0mq9snxqavjk7yd0g73v1bcyrk10rxnh0wqa0yxsyixb63z5j6y3",
-    "url": "https://github.com/Wave-Project/external_cpu_features"
+    "url": "https://github.com/ForkLineageOS/external_cpu_features"
   },
   "external/cpuinfo": {
     "groups": [
@@ -2340,9 +2340,9 @@
   "external/libjpeg-turbo": {
     "groups": [],
     "rev": "535fcb26e6e60784a4fd253adb85b46ecb449258",
-    "revisionExpr": "refs/heads/r",
+    "revisionExpr": "refs/heads/lineage-18.1",
     "sha256": "0808xw07ahgb9mzg7bk9my9363w0cfcmqndnx4a0qfrzia7xfrld",
-    "url": "https://github.com/Wave-Project/external_libjpeg-turbo"
+    "url": "https://github.com/ForkLineageOS/external_libjpeg-turbo"
   },
   "external/libkmsxx": {
     "groups": [
@@ -3721,9 +3721,9 @@
   "external/sqlite": {
     "groups": [],
     "rev": "64d170f13618d0d7d1d2e5d67734b46d7359a54c",
-    "revisionExpr": "refs/heads/r",
+    "revisionExpr": "refs/heads/lineage-18.1",
     "sha256": "0hcy3286s7mi94lscm6p2s8qb92mpgrmgwn9794bkh1m9hq9db3d",
-    "url": "https://github.com/Wave-Project/external_sqlite"
+    "url": "https://github.com/ForkLineageOS/external_sqlite"
   },
   "external/squashfs-tools": {
     "groups": [
@@ -4155,9 +4155,9 @@
   "external/zlib-ng": {
     "groups": [],
     "rev": "e21ab684440a501e0d2d9a3fcbc1f3d3f812e235",
-    "revisionExpr": "refs/heads/r",
+    "revisionExpr": "refs/heads/lineage-18.1",
     "sha256": "1z8fhcjs6brngwcpwjx6j73srkk6s6k82mpny6hxivq60d4h7iwr",
-    "url": "https://github.com/Wave-Project/external_zlib-ng"
+    "url": "https://github.com/ForkLineageOS/external_zlib-ng"
   },
   "external/zopfli": {
     "groups": [
@@ -4437,13 +4437,13 @@
     "url": "https://android.googlesource.com/platform/frameworks/opt/net/voip"
   },
   "frameworks/opt/net/wifi": {
-    "dateTime": 1634066150,
+    "dateTime": 1634560533,
     "groups": [
       "pdk"
     ],
-    "rev": "0084b657557fdeb5165afd78ebac6fc1eacb27b4",
+    "rev": "0fd222632e10cfbfac8122a477db0139f80c3385",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0zdc5gs6ipcvxsa6m8c66jg0rk2rg8sk9iq51cbkahgc0wpixa96",
+    "sha256": "0518hxqfgfr5qiqj2an2lf51lkld2fkxh1sxpswpkpfq5wlwqy2l",
     "url": "https://github.com/LineageOS/android_frameworks_opt_net_wifi"
   },
   "frameworks/opt/photoviewer": {
@@ -5780,23 +5780,23 @@
     "url": "https://github.com/LineageOS/cve_tracker"
   },
   "lineage/hudson": {
-    "dateTime": 1634074517,
+    "dateTime": 1634582212,
     "groups": [
       "infra"
     ],
-    "rev": "a04dba4ce266fa352cf3caa44b70c2772473edc5",
+    "rev": "70dd07b0f425f5eb3c04bc8ba614c4ebb284b95f",
     "revisionExpr": "master",
-    "sha256": "0yxkmirck9awg5dlnin3p2x0a131akxhwnrwhjykpkq0aq4k90bb",
+    "sha256": "0q27p758365lxzgwcfgzvdymlk0ril01qkn6ha5chnr8rvnlshs4",
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
-    "dateTime": 1634212894,
+    "dateTime": 1634557542,
     "groups": [
       "infra"
     ],
-    "rev": "64062818d11462fef6924fb3cd9f5ec976a7c432",
+    "rev": "21bac6c6f3193f7044b31e940c8fff0b40cff3b7",
     "revisionExpr": "master",
-    "sha256": "1n5a9samf7kc0ckmyd7k2jkc6ih5jzjmy1zmcy6h65wfqhlsj982",
+    "sha256": "1n468q9lia6m4d7jbrdwfb3pyp653xb6dvdvvjj6mn7llgdrc1v4",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
@@ -5830,13 +5830,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1634149300,
+    "dateTime": 1634467469,
     "groups": [
       "infra"
     ],
-    "rev": "d9368bc724eb4d0974ee7b368ee70762747e755a",
+    "rev": "23e1ff49758a81ed17fd940273be01675f209695",
     "revisionExpr": "master",
-    "sha256": "0crkvaz0gwmv64ck5mz5fwvgfk2wcbhz82agwqvr7knrpa07mgab",
+    "sha256": "11i8815r04gr1mfcfc7hd94c1gpmh623yr7aqrmpc5v67pjyv1az",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -6097,13 +6097,13 @@
     "url": "https://github.com/LineageOS/android_packages_apps_DeskClock"
   },
   "packages/apps/Dialer": {
-    "dateTime": 1632412658,
+    "dateTime": 1634560427,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "4b4f5119bf3b6609e3c3f5bf73078571bb85d299",
+    "rev": "7cb4d694f03379657f9de1b7e23f48f934d23245",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "028gggv7jgbyc335byznmv048l1hfwm7k36vnh4zyhfnlfplz58x",
+    "sha256": "030mawrk3zd94b3xd9x4rpidhb8jmd8c887zli3269nji8j25j54",
     "url": "https://github.com/LineageOS/android_packages_apps_Dialer"
   },
   "packages/apps/DocumentsUI": {
@@ -6240,12 +6240,13 @@
     "url": "https://github.com/ForkLineageOS/packages_apps_Matlog"
   },
   "packages/apps/Messaging": {
+    "dateTime": 1631811846,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "07958b86402884895e2e19a9c9ded5f5944b3d58",
+    "rev": "e16e216011c8bdd49ef4818a7d9937c46e706960",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0vsql9v32r47vjmr5i4qmn5cmf2qwvdr10x5a6wvw2az6p1w7ypb",
+    "sha256": "06fsh34mb048kbypacivz0vnsrwy3mx5l57w2ch350x6512x60dv",
     "url": "https://github.com/LineageOS/android_packages_apps_Messaging"
   },
   "packages/apps/Nfc": {
@@ -6276,13 +6277,14 @@
     "url": "https://android.googlesource.com/platform/packages/apps/OneTimeInitializer"
   },
   "packages/apps/PermissionController": {
+    "dateTime": 1633258024,
     "groups": [
       "pdk-cw-fs",
       "pdk-fs"
     ],
-    "rev": "5eb248b2971bbf7485c499758dde046672d931e9",
+    "rev": "7a13d784a1f6821597592ad829154076cc7d2e59",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "088q2379rxzq58ywkwsdlsplssmsjjd917ay5j22vs2rsqhaha2n",
+    "sha256": "1p44qxyn2zqfy2vks1qxhpgd9bnwgd252fxbh0ylnxj3p8vmpk6i",
     "url": "https://github.com/LineageOS/android_packages_apps_PackageInstaller"
   },
   "packages/apps/PhoneCommon": {
@@ -6367,19 +6369,19 @@
     "url": "https://github.com/LineageOS/android_packages_apps_SecureElement"
   },
   "packages/apps/Seedvault": {
-    "dateTime": 1631471660,
+    "dateTime": 1634559476,
     "groups": [],
-    "rev": "ec1120d37d870424b49a87914e7724bf87e7cc5d",
+    "rev": "68dc4f16bc0c383bec3b101b6a33606f3196acb4",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0ylm8k3q9i6d68skpqqzw88vwpvd3dcyig7l0m0qmyl1f404s06l",
+    "sha256": "0xrkczswzxndnhkfv70m23fmyzj81mvb1b3cy3mlw8x0c5hisqkx",
     "url": "https://github.com/LineageOS/android_packages_apps_Seedvault"
   },
   "packages/apps/Settings": {
-    "dateTime": 1634236379,
+    "dateTime": 1634299048,
     "groups": [],
-    "rev": "33b3810752585bd82315b6f8e17489bc73c7812a",
+    "rev": "f7ebf78e85d215f215e2b9bb14c1a0600218d243",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0zbfjswhskin6w7bi2b5bzqj7cv25szl366rnyj948w29s9q7a2l",
+    "sha256": "1bnxmmwnj1avscad1c1wwfh312nms889vq8awrq0znib7lp3fhrr",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
@@ -6528,12 +6530,13 @@
     "url": "https://github.com/ForkLineageOS/android_packages_apps_WallpaperPicker2"
   },
   "packages/inputmethods/LatinIME": {
+    "dateTime": 1634558963,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "d4c6ca85ba6732b1a4ad0deeed655bb8e0cea9ec",
+    "rev": "f812d4b86267b74693285728109c33dab0e706b2",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1h1vlkkjy2gpgf56dhn3hgcj0l4vrzm1pci5hsli3mwj9cmk0fkm",
+    "sha256": "158abm0b4g8hbgibgjay1m4gixcpfya4b2glc2g2w6nfs8ykzp0f",
     "url": "https://github.com/LineageOS/android_packages_inputmethods_LatinIME"
   },
   "packages/inputmethods/LeanbackIME": {
@@ -6727,13 +6730,14 @@
     "url": "https://github.com/LineageOS/android_packages_providers_CallLogProvider"
   },
   "packages/providers/ContactsProvider": {
+    "dateTime": 1629895284,
     "groups": [
       "pdk-cw-fs",
       "pdk-fs"
     ],
-    "rev": "de444eb8882efb81ad2f94068e551529d48fcea0",
+    "rev": "015e107e378d2464e746efc449436ba3b7c89e06",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "150b3x15vcfc85pfn23w22b5yv1la4hc1n4q1in5lm2a0gcharc7",
+    "sha256": "0appc1vgy2rx9ksh6r7qwxldzq1ijgxmv6idjcsqknrgw3js3z7d",
     "url": "https://github.com/LineageOS/android_packages_providers_ContactsProvider"
   },
   "packages/providers/DownloadProvider": {
@@ -7044,9 +7048,9 @@
     "dateTime": 1631700448,
     "groups": [],
     "rev": "a78146829915a39847c44ff47055336d5e1a7f69",
-    "revisionExpr": "r",
+    "revisionExpr": "lineage-18.1",
     "sha256": "16j2g383v6m10iil17ifpsdhnz3fck94rfqsq9zqgskka7b2hkdf",
-    "url": "https://github.com/Wave-Project/prebuilts_clang_host_linux-x86"
+    "url": "https://github.com/ForkLineageOS/prebuilts_clang_host_linux-x86"
   },
   "prebuilts/clang/host/linux-x86/clang-proton": {
     "groups": [],
@@ -7802,9 +7806,9 @@
   "system/memory/lmkd": {
     "groups": [],
     "rev": "eb4e3820237012dba81731de2d66411748073ae9",
-    "revisionExpr": "r",
+    "revisionExpr": "lineage-18.1",
     "sha256": "0ghsbkbncmryy3g5010x8gvib0ffqbpbnk7qvsc8rb43m4c66skz",
-    "url": "https://github.com/Wave-Project/system_memory_lmkd"
+    "url": "https://github.com/ForkLineageOS/system_memory_lmkd"
   },
   "system/netd": {
     "groups": [],
