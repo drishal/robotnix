@@ -4,13 +4,13 @@
 { chromium, fetchFromGitHub, git, python3 }:
 
 let
-  version = "93.0.4577.110";
+  version = "94.0.4606.109";
 
   bromite_src = fetchFromGitHub {
     owner = "bromite";
     repo = "bromite";
     rev = version;
-    sha256 = "0gykhc6nkmh4ixxxh6zjijcdbv2jib42qa6957fzmrjp3kwb2wfa";
+    sha256 = "1px82yyssfslzxv0g3ikp26fjvhh8d6rg0jb36rvg0ycgssx5p3j";
   };
 
 in (chromium.override {
@@ -26,6 +26,7 @@ in (chromium.override {
     dfmify_dev_ui=false;
     disable_android_lint=true;
     disable_autofill_assistant_dfm=true;
+    disable_fieldtrial_testing_config=true;
     disable_tab_ui_dfm=true;
     enable_av1_decoder=true;
     enable_dav1d_decoder=true;
@@ -43,7 +44,6 @@ in (chromium.override {
     enable_vr=false;
     exclude_unwind_tables=false;
     ffmpeg_branding="Chrome";
-    fieldtrial_testing_like_official_build=true;
     icu_use_data_file=true;
     is_component_build=false;
     is_debug=false;
