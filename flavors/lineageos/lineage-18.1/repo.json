@@ -4191,11 +4191,11 @@
     "url": "https://github.com/ForkLineageOS/android_frameworks_av"
   },
   "frameworks/base": {
-    "dateTime": 1636021159,
+    "dateTime": 1636889985,
     "groups": [],
-    "rev": "83738524cab12f60502cd30c059419eba5708856",
+    "rev": "ddaf019b54afc92431e9abb413428b621a6d84ad",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1psaxyfsaqq82gpmi9549d58s9f4wgkiiy7jl15yybwhagnygnrx",
+    "sha256": "01x57a8fcavi4kydk91ksa95zzavpm87dv7cs0aa1qdylp4ww80h",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -5800,13 +5800,13 @@
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
-    "dateTime": 1636635700,
+    "dateTime": 1636894888,
     "groups": [
       "infra"
     ],
-    "rev": "a7c83c94c36a2d5bfab5a79b862d068dc16aa01c",
+    "rev": "43fcb6fcd3d4be2c9a44c57a18a38efd1c6c7828",
     "revisionExpr": "master",
-    "sha256": "1fjmjlvmikvdcmhzh381l23m4l3pkpv4wdqhb3z7bbsficdj3x6h",
+    "sha256": "02sam5d058imsjwqkk4ns9vja2n8dwpwpym8la9jxybdphpl2mwy",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
@@ -6358,11 +6358,11 @@
     "url": "https://github.com/HyperTeam/android_packages_apps_RealmeParts"
   },
   "packages/apps/Recorder": {
-    "dateTime": 1635274905,
+    "dateTime": 1636300033,
     "groups": [],
-    "rev": "e311ed84032c02a8a1b43da387878e368cb53603",
+    "rev": "9f6f47c4c913b212984c4d766705938b00b08e78",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1pzxf4kz48wvr6s3icwak9b8s8j6igl0z76q7bgk156fiascqvql",
+    "sha256": "1izh6qk5lc4b2m41lcnwmjvzpnfq539mql0y62wp6m4xx9cyxb6b",
     "url": "https://github.com/LineageOS/android_packages_apps_Recorder"
   },
   "packages/apps/SafetyRegulatoryInfo": {
@@ -6421,11 +6421,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_SettingsIntelligence"
   },
   "packages/apps/SetupWizard": {
-    "dateTime": 1635274166,
+    "dateTime": 1636902959,
     "groups": [],
-    "rev": "d6850d25587a58de76495e46c4c227b39f19dd22",
+    "rev": "7955e868427f3af03815fc47c281d226698eb9f0",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1lxsgh3al5nm231b0jw5ycdd32zv74gw2ba6yv160rkfkiq8l1hp",
+    "sha256": "1g6vy4i62xcz5z4xiy5x5ypn6rwjawp49flq6pbkhgngy8gshk6x",
     "url": "https://github.com/LineageOS/android_packages_apps_SetupWizard"
   },
   "packages/apps/SimpleDeviceConfig": {
