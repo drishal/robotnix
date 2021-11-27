@@ -12,8 +12,7 @@ let
 
     include $(CLEAR_VARS)
 
-    # Add a prefix to avoid potential conflicts with existing modules
-    LOCAL_MODULE := Robotnix${prebuilt.name}
+    LOCAL_MODULE := ${prebuilt.moduleName}
     LOCAL_MODULE_CLASS := APPS
     LOCAL_SRC_FILES := ${prebuilt.name}.apk
     LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
@@ -28,6 +27,8 @@ let
     }
     ${lib.optionalString (prebuilt.partition == "vendor") "LOCAL_VENDOR_MODULE := true"}
     ${lib.optionalString (prebuilt.partition == "product") "LOCAL_PRODUCT_MODULE := true"}
+    ${lib.optionalString (prebuilt.usesLibraries != []) "LOCAL_USES_LIBRARIES := ${builtins.concatStringsSep " " prebuilt.usesLibraries}"}
+    ${lib.optionalString (prebuilt.usesOptionalLibraries != []) "LOCAL_OPTIONAL_USES_LIBRARIES := ${builtins.concatStringsSep " " prebuilt.usesOptionalLibraries}"}
     ${prebuilt.extraConfig}
 
     include $(BUILD_PREBUILT)
@@ -76,6 +77,19 @@ in
             default = name;
             description = "Name of application. (No spaces)";
             type = types.str; # TODO: Use strMatching to enforce no spaces?
+          };
+
+          modulePrefix = mkOption {
+            default = "Robotnix";
+            description = "Prefix to prepend to the module name to avoid conflicts. (No spaces)";
+            type = types.str; # TODO: Use strMatching to enforce no spaces?
+          };
+
+          moduleName = mkOption {
+            default = "${config.modulePrefix}${config.name}";
+            description = "Module name in the AOSP build system. (No spaces)";
+            type = types.str;
+            internal = true;
           };
 
           apk = mkOption {
@@ -154,6 +168,26 @@ in
             description = ''
               Whether to allow this application to operate in \"power save\" mode.
               Disables battery optimization for this app.
+            '';
+          };
+
+          usesLibraries = mkOption {
+            default = [];
+            type = types.listOf types.str;
+            description = ''
+              Shared library dependencies of this app.
+
+              For more information, see <https://android.googlesource.com/platform/build/+/75342c19323fea64dbc93fdc5a7def3f81113c83/Changes.md>.
+            '';
+          };
+
+          usesOptionalLibraries = mkOption {
+            default = [];
+            type = types.listOf types.str;
+            description = ''
+              Optional shared library dependencies of this app.
+
+              For more information, see <https://android.googlesource.com/platform/build/+/75342c19323fea64dbc93fdc5a7def3f81113c83/Changes.md>.
             '';
           };
 
@@ -298,8 +332,8 @@ in
         '';
       });
 
-    system.additionalProductPackages = map (p: "Robotnix${p.name}") (lib.filter (p: p.partition == "system") enabledPrebuilts);
-    product.additionalProductPackages = map (p: "Robotnix${p.name}") (lib.filter (p: p.partition == "product") enabledPrebuilts);
+    system.additionalProductPackages = map (p: p.moduleName) (lib.filter (p: p.partition == "system") enabledPrebuilts);
+    product.additionalProductPackages = map (p: p.moduleName) (lib.filter (p: p.partition == "product") enabledPrebuilts);
 
     # Convenience derivation to get all prebuilt apks -- for use in custom fdroid repo?
     build.prebuiltApks = pkgs.linkFarm "${config.device}-prebuilt-apks"
