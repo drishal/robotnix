@@ -5805,13 +5805,13 @@
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
-    "dateTime": 1637758911,
+    "dateTime": 1638291730,
     "groups": [
       "infra"
     ],
-    "rev": "db91bac20eaf17b63800c2cda5697f2554d5b6d6",
+    "rev": "d1b3412f336ace0e43535a12026df420e328e422",
     "revisionExpr": "master",
-    "sha256": "0qsfb0ycllb8h2k5dw8gq5b5kqklj2s6ajclap10s65q8vscgrhz",
+    "sha256": "1jv2anxf49sxjddffbk3xjb7ln3yiicg4ga9nxlp1bhi44zqhncv",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
@@ -5845,13 +5845,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1637639226,
+    "dateTime": 1638015037,
     "groups": [
       "infra"
     ],
-    "rev": "de38fe59dc4c4f8f1b704b90853b8163782f8032",
+    "rev": "7b74217c4d6f29ee5e7738b4d0a6a97981c1cc6f",
     "revisionExpr": "master",
-    "sha256": "1wl6d4l56c5lxmpq71652nlbvlz67jf1qf1hln7hvwsrw92arzb6",
+    "sha256": "1hyic6z2shy0zbs2z22zsf188s2laycrvqixbpy18djmq74mdzv2",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
