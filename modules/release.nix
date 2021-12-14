@@ -11,8 +11,9 @@ let
   wrapScript = { commands, keysDir }: let
     jre = if (config.androidVersion >= 11) then pkgs.jdk11_headless else pkgs.jre8_headless;
     deps = with pkgs;
-      [ otaTools openssl jre zip unzip pkgs.getopt which toybox vboot_reference utillinux ]
-      ++ optional (config.androidVersion <= 10) python;  # For brillo_update_payload in Android 10, truncate_file calls out to python
+      [ otaTools openssl jre zip unzip pkgs.getopt which toybox vboot_reference utillinux
+        python # ota_from_target_files invokes, brillo_update_payload which has "truncate_file" which invokes python
+      ];
   in ''
     export PATH=${lib.makeBinPath deps}:$PATH
     export EXT2FS_NO_MTAB_OK=yes
@@ -69,10 +70,10 @@ let
 
       get_radio_image() {
         ${lib.getBin pkgs.unzip}/bin/unzip -p ${targetFiles} OTA/android-info.txt  \
-          |  grep -Po "require version-$1=\K.+" | tr '[:upper:]' '[:lower:]'
+          |  grep "require version-$1" | cut -d'=' -f2 | tr '[:upper:]' '[:lower:]' || exit 1
       }
-      export BOOTLOADER=$(get_radio_image bootloader google_devices/$DEVICE)
-      export RADIO=$(get_radio_image baseband google_devices/$DEVICE)
+      export BOOTLOADER=$(get_radio_image bootloader)
+      export RADIO=$(get_radio_image baseband)
 
       export PATH=${lib.getBin pkgs.zip}/bin:${lib.getBin pkgs.unzip}/bin:$PATH
       ${pkgs.runtimeShell} ${config.source.dirs."device/common".src}/generate-factory-images-common.sh

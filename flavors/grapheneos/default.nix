@@ -31,9 +31,7 @@ in mkIf (config.flavor == "grapheneos") (mkMerge [
   apv.enable = mkIf (elem config.deviceFamily phoneDeviceFamilies) (mkDefault true);
   apv.buildID = mkDefault (
     if (elem config.device [ "crosshatch" "blueline" ]) then "SP1A.210812.015"
-    else if (elem config.device [ "bonito" "sargo" ]) then "SP1A.211105.002"
-    else if (elem config.device [ "barbet" ]) then "SP1A.211105.003"
-    else "SP1A.211105.004"
+    else "SQ1A.211205.008"
   );
 
   # Not strictly necessary for me to set these, since I override the source.dirs above
@@ -46,6 +44,12 @@ in mkIf (config.flavor == "grapheneos") (mkMerge [
     ++ (optional (config.deviceFamily == "crosshatch") "crosshatch/blueline are considered legacy devices and receive only extended support updates from GrapheneOS and no longer receive vendor updates from Google");
 }
 {
+  # Upstream tag doesn't always set the BUILD_ID and platform security patch correctly for legacy crosshatch/blueline
+  source.dirs."build/make".postPatch = mkIf (elem config.device [ "crosshatch" "blueline" ]) ''
+    echo BUILD_ID=SP1A.210812.015 > core/build_id.mk
+    sed -i 's/PLATFORM_SECURITY_PATCH := 2021-11-05/PLATFORM_SECURITY_PATCH := 2021-11-01/g' core/version_defaults.mk
+  '';
+
   # Disable setting SCHED_BATCH in soong. Brings in a new dependency and the nix-daemon could do that anyway.
   source.dirs."build/soong".patches = [
     (pkgs.fetchpatch {

@@ -12,17 +12,15 @@ let
 in
 (mkIf (config.flavor == "vanilla" && config.androidVersion == 12) (mkMerge [
 {
-  buildDateTime = mkDefault 1635822919;
+  buildDateTime = mkDefault 1638909168;
 
   source.manifest.rev = mkDefault (
     if (config.deviceFamily == "raviole") then "android-12.0.0_r14"
-    else if (elem config.deviceFamily [ "redfin" "barbet" ]) then "android-12.0.0_r10"
-    else "android-12.0.0_r8"
+    else "android-12.0.0_r16"
   );
   apv.buildID = mkDefault (
     if (config.deviceFamily == "raviole") then "SD1A.210817.037"
-    else if (elem config.deviceFamily [ "redfin" "barbet" ]) then "SP1A.211105.003"
-    else "SP1A.211105.002"
+    else "SQ1A.211205.008"
   );
 
 #  # Disable for now until we have it tested working
@@ -64,7 +62,8 @@ in
   };
 
   # Fixes a crash when opening Battery Manager settings
-  source.dirs."packages/apps/Settings".patches = [
+  # TODO: Remove when we have a new tag for raviole
+  source.dirs."packages/apps/Settings".patches = mkIf (config.deviceFamily == "raviole") [
     (pkgs.fetchpatch {
       url = "https://github.com/ProtonAOSP/android_packages_apps_Settings/commit/1aa49ec5017326ec6297e9ee067eb23647618494.patch";
       sha256 = "0nzr8c5chhlvd2zwvbk6a0cfxm6psrqbw94012igmhps4c04f2lx";
@@ -91,6 +90,24 @@ in
     "device/google/gs101".patches = [
       ./device_google_gs101-workaround.patch
     ] ++ optional config.apv.enable ./device_google_gs101-vintf-manifest.patch;
+
+    "frameworks/base".patches = [
+      (pkgs.fetchpatch {
+        name = "systemui-import-pixel-display-interfaces.patch";
+        url = "https://github.com/ProtonAOSP/android_frameworks_base/commit/132bea5688fd7705a4c8a4ffe0a92a4c258f6b89.patch";
+        sha256 = "sha256-sJA8zWRPQwo3sPIPPQQpJLdLmC9hOY96aHfl+NsPIN0=";
+      })
+      (pkgs.fetchpatch {
+        name = "systemui-add-hbm-provider-for-udfps-n-pixel-devices.patch";
+        url = "https://github.com/ProtonAOSP/android_frameworks_base/commit/155b137e1dfef173eeb391d5eea5ce3252ceaddc.patch";
+        sha256 = "sha256-o03f5XZ+u+K1UrywG2Y28AjjK3ybaQE8mO0hVK9ypiQ=";
+      })
+      (pkgs.fetchpatch {
+        name = "systemui-use-pixel-udfps-hbm-provider.patch";
+        url = "https://github.com/ProtonAOSP/android_frameworks_base/commit/fa93eb6b0f87f8cb1f0a048285f55e4ca312e61f.patch";
+        sha256 = "sha256-IKMlxUrdXYjtwU4ep7iwqjJtcXxBE4WDkNv4GfCnbw4=";
+      })
+    ];
 
     # Workaround for prebuilt apex package in vendor partition.
     # TODO: Replace with Nix-based apv alternative
