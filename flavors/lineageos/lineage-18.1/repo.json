@@ -387,11 +387,11 @@
     "url": "https://android.googlesource.com/device/google/vrservices"
   },
   "device/lineage/atv": {
-    "dateTime": 1639352146,
+    "dateTime": 1639426881,
     "groups": [],
-    "rev": "8efed18e258de09fdab3a282a39e7cf02397a342",
+    "rev": "02256c824efcb83e5a7b0824d8ee29cb951de82b",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0lfs8xmwqw8ayn4pq2bbbd134ggpfydp7pwdadzxy4nnm92b8r9q",
+    "sha256": "0gxa8r07wv5l9asqdz3f6q6dg7s2m3xyk40jg9yj0ax397v6knql",
     "url": "https://github.com/LineageOS/android_device_lineage_atv"
   },
   "device/lineage/car": {
@@ -5807,13 +5807,13 @@
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
-    "dateTime": 1639844654,
+    "dateTime": 1640005289,
     "groups": [
       "infra"
     ],
-    "rev": "7d458187360c6503672fd91a4bfc928e0039bf7b",
+    "rev": "d42729afd77f075df896fe8631564f7096c32ce6",
     "revisionExpr": "master",
-    "sha256": "16iwz2xravmkns2a5fsipnrlz4nlqiw56sdwdkh6jazfbw5rkjsh",
+    "sha256": "1fw0ba4ahgfbqp9qbv3swksidmfhd4jp8j800mxqq9bvj24nwhlf",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
