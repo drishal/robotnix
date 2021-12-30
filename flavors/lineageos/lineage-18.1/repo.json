@@ -5797,23 +5797,23 @@
     "url": "https://github.com/LineageOS/cve_tracker"
   },
   "lineage/hudson": {
-    "dateTime": 1638901016,
+    "dateTime": 1639898998,
     "groups": [
       "infra"
     ],
-    "rev": "45f5d2e3130f375eb925ed1d43a766c5d11f4ecc",
+    "rev": "d7edbfc7631fd73226726838abb2ed5eb4c08f62",
     "revisionExpr": "master",
-    "sha256": "118qs4kwfr8k1fy9kjcs1rjyfqgdgipha54d5wxhj7sk8y1p7vlw",
+    "sha256": "0yxs5zpvsbvm8zmpydn6w1r7kas25wiijnrwxqf9znznn5mn4q17",
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
-    "dateTime": 1640005289,
+    "dateTime": 1640869297,
     "groups": [
       "infra"
     ],
-    "rev": "d42729afd77f075df896fe8631564f7096c32ce6",
+    "rev": "fd1ce4414c7415e3d61c16226c160ef02b39c987",
     "revisionExpr": "master",
-    "sha256": "1fw0ba4ahgfbqp9qbv3swksidmfhd4jp8j800mxqq9bvj24nwhlf",
+    "sha256": "05n4x75bbj7yc97xd5gy0dqhgsjcy0gcavpgkv7dxz9q7jabdbml",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
@@ -5847,13 +5847,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1639585345,
+    "dateTime": 1640762243,
     "groups": [
       "infra"
     ],
-    "rev": "975e302ea2c8a4932650857d75c6c70f64c7e6b7",
+    "rev": "ff06ddb4643d1df157e66f4ef0ba853ece00d184",
     "revisionExpr": "master",
-    "sha256": "0l8p9cfdp2j1xfjmh2bnl961d0lby8frzv4pplq5ikgjpqi6fdc5",
+    "sha256": "0qfmq1vsz25n59bz23nybd7jy0qlwyfihxjxxgskz7m2jpfmx16i",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -6109,13 +6109,13 @@
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Contacts"
   },
   "packages/apps/DeskClock": {
-    "dateTime": 1637328084,
+    "dateTime": 1640687825,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "cb822061aae14e2c1078c92fee3aeab974c21dee",
+    "rev": "5be410c55435de16697cb8521ba049b294605e82",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0s5zrq2698sbad7qbk8ljwd5n89jkwvrqly6xc5lb4rvqgpk9yhz",
+    "sha256": "164fl8rk206kfan3f6ybnl97psk411sq7824wa3266p5a3b6qx9y",
     "url": "https://github.com/LineageOS/android_packages_apps_DeskClock"
   },
   "packages/apps/Dialer": {
@@ -6140,11 +6140,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_DocumentsUI"
   },
   "packages/apps/Eleven": {
-    "dateTime": 1638055164,
+    "dateTime": 1640704728,
     "groups": [],
-    "rev": "16ba414d4a0d41ffb0137a958259383212b2de09",
+    "rev": "5da92bd1d39b045c7f297af5176f223635c3a75c",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0fng6i2hb12ngn2xas120yvzh42926766yrpq00bxrk9s93i704m",
+    "sha256": "1aq7ss0w8xadlgs4bg7wjhnagknzhbbvzprzc7vn33a35jxv4w4h",
     "url": "https://github.com/LineageOS/android_packages_apps_Eleven"
   },
   "packages/apps/EmergencyInfo": {
