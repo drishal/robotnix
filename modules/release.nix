@@ -139,6 +139,7 @@ in
 
     # Pull this out of target files, because (at least) verity key gets put into boot ramdisk
     bootImg = pkgs.runCommand "boot.img" {} "${pkgs.unzip}/bin/unzip -p ${targetFiles} IMAGES/boot.img > $out";
+    recoveryImg = pkgs.runCommand "recovery.img" {} "${pkgs.unzip}/bin/unzip -p ${targetFiles} IMAGES/recovery.img > $out";
 
     # BUILDID_PLACEHOLDER below was originally config.apv.buildID, but we don't want to have to depend on setting a buildID generally.
     otaMetadata = (rec {
@@ -163,12 +164,12 @@ in
       );
     }).${config.apps.updater.flavor};
 
-    writeOtaMetadata = path: {
+    writeOtaMetadata = { otaFile, path }: {
       grapheneos = ''
         cat ${otaMetadata} > ${path}/${config.device}-${config.channel}
       '';
       lineageos = ''
-        sed -e "s:\"ROM_SIZE\":$(du -b ${ota} | cut -f1):" ${otaMetadata} > ${path}/lineageos-${config.device}.json
+        sed -e "s:\"ROM_SIZE\":$(du -b ${otaFile} | cut -f1):" ${otaMetadata} > ${path}/lineageos-${config.device}.json
       '';
     }.${config.apps.updater.flavor};
 
@@ -179,7 +180,7 @@ in
       ln -s "${targetFiles}" "$out/${config.device}-target_files-${config.buildNumber}.zip"
       ${lib.optionalString config.incremental ''ln -s ${incrementalOta} "$out/${incrementalOta.name}"''}
 
-      ${writeOtaMetadata (placeholder "out")}
+      ${writeOtaMetadata { otaFile = ota; path = placeholder "out"; }}
     '';
 
     # TODO: Do this in a temporary directory. It's ugly to make build dir and ./tmp/* dir gets cleared in these scripts too.
@@ -211,7 +212,7 @@ in
       echo Building factory image
       ${factoryImgScript { targetFiles=signedTargetFiles.name; img=img.name; out=factoryImg.name; }}
       echo Writing updater metadata
-      ${writeOtaMetadata "."}
+      ${writeOtaMetadata { otaFile=ota.name; path = "."; }}
     ''; }));
   };
 }
