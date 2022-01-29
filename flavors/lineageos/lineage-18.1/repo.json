@@ -1,10 +1,10 @@
 {
   "android": {
-    "dateTime": 1641868272,
+    "dateTime": 1642689488,
     "groups": [],
-    "rev": "532ec42710d6550b0f1c9dd5c776e247d664b368",
+    "rev": "96b0638abc6197402f5d2b0703de5034a37155fa",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1nmgrmd0asvzy2gxx1ag59q6m9xp9rxgnz6jbprqnc3p2ljmyfhg",
+    "sha256": "05p1ljsv6swny4kxz9ap2ncb99k252493q3igx8jqx511p86r3k4",
     "url": "https://github.com/LineageOS/android"
   },
   "art": {
@@ -26,13 +26,13 @@
     "url": "https://github.com/ForkLineageOS/android_bionic"
   },
   "bootable/recovery": {
-    "dateTime": 1637341023,
+    "dateTime": 1641411893,
     "groups": [
       "pdk"
     ],
-    "rev": "3b60be6cf5241f7160b32e5a57810e00d62ec7e2",
+    "rev": "b4175afe7402cf030a1f3552e2232a5b2312f870",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1r213wwmmydzznqlp4vvzrdfyll1naxx9lnl4rc8hlql1gwzlzqv",
+    "sha256": "166vx4ai0p9mfviq6j3jlzx1qzfb11cgqggy2a7dsisclxdsly7v",
     "url": "https://github.com/LineageOS/android_bootable_recovery"
   },
   "build/blueprint": {
@@ -52,7 +52,7 @@
         "src": "core/root.mk"
       }
     ],
-    "dateTime": 1639762997,
+    "dateTime": 1642917491,
     "groups": [
       "pdk"
     ],
@@ -82,9 +82,9 @@
         "src": "tools"
       }
     ],
-    "rev": "99656461c901e2ecd53a37f6abdda3cda6b6b458",
+    "rev": "33e9dc1d11919870e7415d457112f282c519fbda",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0n4v6krvhncx73n9rrz60i9i4a6xscjf2sq3fmvgdrh1c1yc103b",
+    "sha256": "1cizr4j850qj8009xqawn3wqhix8z6qrnm6935y66cldscb1sa8y",
     "url": "https://github.com/ForkLineageOS/android_build"
   },
   "build/soong": {
@@ -395,6 +395,7 @@
     "url": "https://github.com/LineageOS/android_device_lineage_atv"
   },
   "device/lineage/car": {
+    "dateTime": 1626332915,
     "groups": [],
     "rev": "ac49fa77109148dfe3d6e433e179b09d83aa1e69",
     "revisionExpr": "refs/heads/lineage-18.1",
@@ -440,13 +441,14 @@
     "url": "https://github.com/LineageOS/android_device_qcom_sepolicy"
   },
   "device/qcom/sepolicy_vndr": {
+    "dateTime": 1643209482,
     "groups": [
       "pdk-qcom",
       "qcom"
     ],
-    "rev": "fd50b2bf1e12a71b1284206d231e7b7ff6c4c361",
+    "rev": "6c122b26629f84c8383d1db583fe5ae0b59fcfaa",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0irz64zpsb35j0x5mib7npy8c06qrwdrwsdm7bvinpyjqfvf6wry",
+    "sha256": "0nanm2d1lq5z67w01plkr3jsilk5z6p5id2629mg4rkfk861cd55",
     "url": "https://github.com/LineageOS/android_device_qcom_sepolicy_vndr"
   },
   "device/sample": {
@@ -613,6 +615,7 @@
     "url": "https://github.com/LineageOS/android_external_ant-wireless_ant_client"
   },
   "external/ant-wireless/ant_native": {
+    "dateTime": 1579643644,
     "groups": [],
     "rev": "c674e613ac60fcd7583ca26bbb8878eec6aec851",
     "revisionExpr": "refs/heads/lineage-18.1",
@@ -924,13 +927,13 @@
     "url": "https://android.googlesource.com/platform/external/chromium-trace"
   },
   "external/chromium-webview": {
-    "dateTime": 1639534997,
+    "dateTime": 1642773302,
     "groups": [
       "pdk"
     ],
-    "rev": "49b105a123147f5a94e07765cb5fe98a045c7b15",
+    "rev": "c7ab4956767692d1be543096e53df1b286e6fd57",
     "revisionExpr": "master",
-    "sha256": "0r3drks3vhm01m8p5kiz900m2sz77xnqv2kndm9jmw0x155p3bl8",
+    "sha256": "10d13zjgjfjr5kb6calycs90r03dss3z5gh4y8wrsjihjqp6gwh9",
     "url": "https://github.com/LineageOS/android_external_chromium-webview"
   },
   "external/clang": {
@@ -2127,14 +2130,14 @@
     "url": "https://android.googlesource.com/platform/external/libaom"
   },
   "external/libavc": {
+    "dateTime": 1641413123,
     "groups": [
       "pdk"
     ],
-    "rev": "c4438474194ec19b0dfad8ab11042a7bed74d35e",
-    "revisionExpr": "refs/tags/android-11.0.0_r48",
-    "sha256": "12983a8hnp8l62l660x71c2j9v8yz0wz8l0vd5kf2pdbj7p9jpqz",
-    "tree": "0a2d7ad1328fea2b091429c242bc26d25bf8d600",
-    "url": "https://android.googlesource.com/platform/external/libavc"
+    "rev": "638188b96cbd176792558d8a5355d358e574fdfe",
+    "revisionExpr": "refs/heads/lineage-18.1",
+    "sha256": "1jfsx8mrnnj282w9vainbx9p12sw6rf70rc657lqgp44vmiy1vb6",
+    "url": "https://github.com/LineageOS/android_external_libavc"
   },
   "external/libbackup": {
     "groups": [
@@ -2277,14 +2280,14 @@
     "url": "https://android.googlesource.com/platform/external/libevent"
   },
   "external/libexif": {
+    "dateTime": 1641413159,
     "groups": [
       "pdk"
     ],
-    "rev": "7037f8288d030ed028ecc64c841fa48b8cc1b352",
-    "revisionExpr": "refs/tags/android-11.0.0_r48",
-    "sha256": "0450yj3sp99crxqmxvzl4hsf0md4ng55dbpxcrrnji5zy25wx1rd",
-    "tree": "2dc0c8fc86a4d7a276d17b56b752355d1b7f9d2b",
-    "url": "https://android.googlesource.com/platform/external/libexif"
+    "rev": "c06fb4a306fa56519b44cfa47c7f65a5b187fac7",
+    "revisionExpr": "refs/heads/lineage-18.1",
+    "sha256": "1ip8sgcbkqpc7mifc5q9x5j7xaa07v1gb3fkfdjkhqsivvf1pqq7",
+    "url": "https://github.com/LineageOS/android_external_libexif"
   },
   "external/libffi": {
     "groups": [
@@ -4189,19 +4192,19 @@
     "url": "https://android.googlesource.com/platform/external/zxing"
   },
   "frameworks/av": {
-    "dateTime": 1639290930,
+    "dateTime": 1642916567,
     "groups": [],
-    "rev": "1157877334a4529e97ba9fc10d06415a6e9ea1fe",
+    "rev": "acd3a839896d630f998bfddf0dfa7c4dfe1f2711",
     "revisionExpr": "lineage-18.1",
-    "sha256": "03qiwm0apw975jsjmgk6j612z3imll234jqa3vbld9yr7jg1mdqx",
+    "sha256": "0mw8q0nycajmlqlx7is565xhfbzjzalhxfv0bxr32cwknmdvc8z5",
     "url": "https://github.com/ForkLineageOS/android_frameworks_av"
   },
   "frameworks/base": {
-    "dateTime": 1639763119,
+    "dateTime": 1642917852,
     "groups": [],
-    "rev": "de363cd4f2370df169e5c613b5606acf75fa2d84",
+    "rev": "086d3032e11140c5c571fbfd3e8b29f41f84d7bf",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0jgwybbhpcga6l9cg7j02v6rad974kbc8k5jnz12pkbl09wasrwv",
+    "sha256": "13ykd95jil3gdh2dbvwfpc8a2r88h5k1p8r8qz3s1fbynr82g869",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -4333,13 +4336,13 @@
     "url": "https://android.googlesource.com/platform/frameworks/multidex"
   },
   "frameworks/native": {
-    "dateTime": 1635999909,
+    "dateTime": 1642916957,
     "groups": [
       "pdk"
     ],
-    "rev": "96dfab9b2580d3f97fbec579820105ba4df1ce59",
+    "rev": "202b9539e2ad3b0ecac986c621a34a7669ce3a27",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0mfyl1gbdjdz945b72y1kvqmq7lsz6z3wxg5g5vn3r2vy0vwiwrl",
+    "sha256": "03vjbf94dqqz03cifh4vg02g0b1ymmpj782amfc990mz1gh0byk7",
     "url": "https://github.com/ForkLineageOS/android_frameworks_native"
   },
   "frameworks/opt/bitmap": {
@@ -4479,13 +4482,13 @@
     "url": "https://android.googlesource.com/platform/frameworks/opt/setupwizard"
   },
   "frameworks/opt/telephony": {
-    "dateTime": 1633409148,
+    "dateTime": 1642916998,
     "groups": [
       "pdk"
     ],
-    "rev": "2925311a8b7330c1fc56857bd2e79d294e741660",
+    "rev": "d075d8c82d2e17f6c382a1e5769454713f70bea6",
     "revisionExpr": "lineage-18.1",
-    "sha256": "0km85pr6m92vmdkzzpjjj39mmjwrf4jdys4w6yz7gz94smhc6rmj",
+    "sha256": "1f14q5ac9csdnhkvah3858y8kzvkw4a4mxpjx6jd42h8s9ngyckw",
     "url": "https://github.com/ForkLineageOS/android_frameworks_opt_telephony"
   },
   "frameworks/opt/timezonepicker": {
@@ -4702,6 +4705,7 @@
     "url": "https://github.com/LineageOS/android_hardware_lineage_interfaces"
   },
   "hardware/lineage/livedisplay": {
+    "dateTime": 1613534093,
     "groups": [],
     "rev": "3e298771b18d6c0e28350f50c7204c3c036662b8",
     "revisionExpr": "refs/heads/lineage-18.1",
@@ -4729,6 +4733,7 @@
     "url": "https://android.googlesource.com/platform/hardware/nxp/secure_element"
   },
   "hardware/qcom-caf/apq8084/audio": {
+    "dateTime": 1572307147,
     "groups": [
       "pdk-qcom",
       "qcom",
@@ -4741,6 +4746,7 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/apq8084/display": {
+    "dateTime": 1571790117,
     "groups": [
       "pdk-qcom",
       "qcom",
@@ -4753,6 +4759,7 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_display"
   },
   "hardware/qcom-caf/apq8084/media": {
+    "dateTime": 1571784785,
     "groups": [
       "pdk-qcom",
       "qcom"
@@ -4784,6 +4791,7 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_bt"
   },
   "hardware/qcom-caf/common": {
+    "dateTime": 1610014891,
     "groups": [
       "pdk-qcom",
       "qcom"
@@ -4888,14 +4896,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom-caf_common"
   },
   "hardware/qcom-caf/msm8916/audio": {
+    "dateTime": 1641510134,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "8eea1010cf0d04799b390fd9c0dced20fb7bfc7d",
+    "rev": "e0e79d6281d55c4f0c93ec7d471d4554281a796b",
     "revisionExpr": "lineage-18.1-caf-msm8916",
-    "sha256": "0rwn8j79pvk6pf0gsgzvq1msmfr01263afihpycwv8mi82lbvvva",
+    "sha256": "1wgbjcq5iy49nifmnnccaw98cc0gq4fxd9vcfpjpib5hcn8m47mf",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/msm8916/display": {
@@ -4920,14 +4929,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_media"
   },
   "hardware/qcom-caf/msm8952/audio": {
+    "dateTime": 1641510199,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "fa159a0bfaf57a69adb766838be49929738da011",
+    "rev": "c8f712cca75c74b9ef6583f85ecfe20f24c3376c",
     "revisionExpr": "lineage-18.1-caf-msm8952",
-    "sha256": "0hg29c1zvn7c72nj8125h9yn3wdfgf64l0vq7fv3pgdiwbvywnw1",
+    "sha256": "0zjjy6yylcfd564vyk13z935lj96n8fmgm4hvrhl29xxapfpgdh2",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/msm8952/display": {
@@ -5049,15 +5059,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_media"
   },
   "hardware/qcom-caf/msm8996/audio": {
-    "dateTime": 1606226519,
+    "dateTime": 1641510292,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "13e39bb476e67c1895982e63bce325886fccdb48",
+    "rev": "0fc4528a2b10fe4faf8a9c4959417957d264d419",
     "revisionExpr": "lineage-18.1-caf-msm8996",
-    "sha256": "01s5d4kbw9zzdq8h1fjfaqvr0bn18v4zs21c0ibnlv6m4kicg0k0",
+    "sha256": "0s6nw2pjrywz16pqq6zgmslbdd0irpm3sm5jcnw291ngnzglsz1g",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/msm8996/display": {
@@ -5116,15 +5126,15 @@
     "url": "https://github.com/PixelExperience/hardware_qcom-caf_msm8998_media"
   },
   "hardware/qcom-caf/sdm845/audio": {
-    "dateTime": 1635503576,
+    "dateTime": 1641509148,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "bc142d1d3c4bcc48d37a9cc74f07abe26fd29dd4",
+    "rev": "bd63d5c759946a714245de90fcf53bf4ee5964bc",
     "revisionExpr": "lineage-18.1-caf-sdm845",
-    "sha256": "01qc376j26f4021lcmm4x73q7kxcismpby3pd2svg7hgsg4v3bjz",
+    "sha256": "131cnkjj5dmhm6pz0vbdv09vsfnx1j2h9q9i4jgky20zhl8cyb0f",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/sdm845/display": {
@@ -5150,15 +5160,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_media"
   },
   "hardware/qcom-caf/sm8150/audio": {
-    "dateTime": 1635457940,
+    "dateTime": 1641509163,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "f30f5c2d75abc10ed8ad8640f37e263ff64027ba",
+    "rev": "948a7ef42c46dbecc7ca35b235f4e96485c53bb3",
     "revisionExpr": "lineage-18.1-caf-sm8150",
-    "sha256": "094d5m3ncn9inmwjj47nk5pb841vsfkiqrmjmj91c2yn7lxlq12p",
+    "sha256": "0scykq0lfqqgjhhlhdbhc1v9wjg2x1l3g0c72h7n4gw8jklp210f",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/sm8150/display": {
@@ -5183,15 +5193,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_media"
   },
   "hardware/qcom-caf/sm8250/audio": {
-    "dateTime": 1635457813,
+    "dateTime": 1641509186,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "adead2fbf79b083d9d6ecdcb7ea285cf4f4fbed1",
+    "rev": "bed4ccce77c07e2d66da01cb9ae39ea23ffa6804",
     "revisionExpr": "lineage-18.1-caf-sm8250",
-    "sha256": "14l2ylsm1qi8ajinvby92s24f97q0s8znzcnn7ln2w26l66jcb41",
+    "sha256": "04am3c34wd5za4dznkg56hms9ki36jyrm9ah5mplz850bip1668f",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/sm8250/display": {
@@ -5216,15 +5226,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_media"
   },
   "hardware/qcom-caf/sm8350/audio": {
-    "dateTime": 1635457951,
+    "dateTime": 1641509196,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "dc606a15a36dfa45d92349561d388437591be12b",
+    "rev": "a2f6a9b5db931791ffb4ce8fe8011d06431fc0fa",
     "revisionExpr": "lineage-18.1-caf-sm8350",
-    "sha256": "1j7ynpnfip0rqhc0h64aygr11p3nzbp0k1sf8biz3qjrazjqax28",
+    "sha256": "08y5y7k0z743myyi5ziz1kaxxf5j1zik2i84ig8k4pi52v4f7lyd",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom-caf/sm8350/display": {
@@ -5259,6 +5269,7 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_thermal"
   },
   "hardware/qcom-caf/vr": {
+    "dateTime": 1568411154,
     "groups": [
       "pdk-qcom",
       "qcom"
@@ -5280,14 +5291,15 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_wlan"
   },
   "hardware/qcom/audio": {
+    "dateTime": 1641553356,
     "groups": [
       "pdk-qcom",
       "qcom",
       "qcom_audio"
     ],
-    "rev": "2645d01640b897e06aaf552db54dfcd33615ff39",
+    "rev": "bfb3ac5202465f2191d39b146c57e003cf05c401",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "003sz1vg2cq906jwqpysi2kxr56igsssh58haiy9lwq1kiyqxi5w",
+    "sha256": "099qrridc15zm9bj9hh3gw0lam9lb9scrcjjk95p9qfdhz44jwrj",
     "url": "https://github.com/LineageOS/android_hardware_qcom_audio"
   },
   "hardware/qcom/bootctrl": {
@@ -5355,6 +5367,7 @@
     "url": "https://github.com/LineageOS/android_hardware_qcom_gps"
   },
   "hardware/qcom/keymaster": {
+    "dateTime": 1576087420,
     "groups": [
       "pdk-qcom",
       "qcom",
@@ -5747,6 +5760,7 @@
     "url": "https://github.com/ForkLineageOS/android_lineage-sdk"
   },
   "lineage/ansible": {
+    "dateTime": 1519795388,
     "groups": [
       "infra"
     ],
@@ -5789,6 +5803,7 @@
     "url": "https://github.com/LineageOS/cm_crowdin"
   },
   "lineage/cve": {
+    "dateTime": 1565678376,
     "groups": [
       "infra"
     ],
@@ -5799,36 +5814,37 @@
     "url": "https://github.com/LineageOS/cve_tracker"
   },
   "lineage/hudson": {
-    "dateTime": 1639898998,
+    "dateTime": 1643220238,
     "groups": [
       "infra"
     ],
-    "rev": "d7edbfc7631fd73226726838abb2ed5eb4c08f62",
+    "rev": "50e855a8a8447702b2addcc2643b12d13b821a42",
     "revisionExpr": "master",
-    "sha256": "0yxs5zpvsbvm8zmpydn6w1r7kas25wiijnrwxqf9znznn5mn4q17",
+    "sha256": "0hjp4b5f6byj8ra1z81gm9ncmf4bngqbx4df29pgssmp08imhm78",
     "url": "https://github.com/LineageOS/hudson"
   },
   "lineage/mirror": {
-    "dateTime": 1641906116,
+    "dateTime": 1643473417,
     "groups": [
       "infra"
     ],
-    "rev": "1ded93a45e177c7221702a62fd216762f5ae464b",
+    "rev": "f955a7973710ac3fe743d3e5d7538297e351524d",
     "revisionExpr": "master",
-    "sha256": "0fkz7n8l6mphiq03qx09cl98d4zqr7yswr12zmrgcmlsna6yh3y1",
+    "sha256": "1irxhgzq430m02j5ccaacgcbxjdlm173h26lr2rclj7q5nqgd4dh",
     "url": "https://github.com/LineageOS/mirror"
   },
   "lineage/scripts": {
-    "dateTime": 1641770039,
+    "dateTime": 1642712056,
     "groups": [
       "tools"
     ],
-    "rev": "9ece25863683787b736441f9a855fdd8dfca0b7a",
+    "rev": "5ae19430db3abb7cd8693f11929e3adf6cae96fb",
     "revisionExpr": "master",
-    "sha256": "1nxv9q7ipggan5b8lv4gxxk9qzvq0bzd9cmm2zlwvx6xc47wl6g4",
+    "sha256": "1a2w88mkppgcigbpg4mjk9spc0fxnkjni3khkq851sq2bm36k9gf",
     "url": "https://github.com/LineageOS/scripts"
   },
   "lineage/slackbot": {
+    "dateTime": 1515511055,
     "groups": [
       "infra"
     ],
@@ -5849,13 +5865,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1641982505,
+    "dateTime": 1643297117,
     "groups": [
       "infra"
     ],
-    "rev": "dada8fb035d987709053dbf8a734025469f9cb88",
+    "rev": "c44c923da3c00b3b821b8588ca7cf5e189d4184e",
     "revisionExpr": "master",
-    "sha256": "12l2547axn56ddv2h26jygwfa6hin333cj8h8s9mhkh5vvr9l9r2",
+    "sha256": "1qg1xcg1ilszg2740k1n8pnx0f3xzgqla67qyzc68dhy6rrrf3vv",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -6121,13 +6137,13 @@
     "url": "https://github.com/LineageOS/android_packages_apps_DeskClock"
   },
   "packages/apps/Dialer": {
-    "dateTime": 1635774519,
+    "dateTime": 1641413750,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "dead11187ab86d7d57f506c4360952687c742e70",
+    "rev": "990a73e5b6370d54da543df42eae49fae308ec5a",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "07kay785m49b6jxfd4y1idyd2l1b2bz1sp42di4zqqwxg7wmfj31",
+    "sha256": "0s8dg2grpns9x9zkifsnc64ankw9zpbqbd44hzvaqj856b7wr2yj",
     "url": "https://github.com/LineageOS/android_packages_apps_Dialer"
   },
   "packages/apps/DocumentsUI": {
@@ -6243,6 +6259,7 @@
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Launcher3"
   },
   "packages/apps/LineageCustomizer": {
+    "dateTime": 1534456022,
     "groups": [],
     "rev": "902123e64d4f365749d692baa23909f216cebc82",
     "revisionExpr": "refs/heads/lineage-18.1",
@@ -6361,10 +6378,11 @@
     "url": "https://android.googlesource.com/platform/packages/apps/QuickAccessWallet"
   },
   "packages/apps/RealmeParts": {
+    "dateTime": 1642698332,
     "groups": [],
-    "rev": "58bce2bd99468fde9482dd59a1b753c10fa9ef84",
+    "rev": "79222d2168af1e5d0082b3dea64a0d08b952d893",
     "revisionExpr": "lineage-18.1",
-    "sha256": "06rg2ab5i1yy60lipm60jdqz4fl5my6a4mi5ajqm50ckhip0415b",
+    "sha256": "06hbwdvv2id2v7vlj7cvz7qs2h8wkz5pwi9pj4hmv5cvyjag3lby",
     "url": "https://github.com/HyperTeam/android_packages_apps_RealmeParts"
   },
   "packages/apps/Recorder": {
@@ -6414,20 +6432,21 @@
     "url": "https://github.com/LineageOS/android_packages_apps_Seedvault"
   },
   "packages/apps/Settings": {
-    "dateTime": 1639762375,
+    "dateTime": 1642917298,
     "groups": [],
-    "rev": "618e9fbb0e2bb97572632504cff6b6d3d7f719ba",
+    "rev": "103af996c52a8d75076f12e2acbcddd24b167976",
     "revisionExpr": "lineage-18.1",
-    "sha256": "09ci9394hl91v6dm8q7cpzziwx8g53hgja0sx7yhm7v8inpwfkcw",
+    "sha256": "0b9il7n34cz0xlm9s8za749v0icmxwzwbq5mdwni2wwnx7h306p1",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
+    "dateTime": 1642978054,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "b3da2c57eb042440bf80feec46589ca0b2da305d",
+    "rev": "da232f4c56e3d5268d96722c8cd1cb18a1cc40b2",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "0nqiz1yy538d1m6y19jcbm77wy9plfzrh8angkkgfrv109swc3p8",
+    "sha256": "0l4cicvj2hwn9fzzhan5aji9ykgi4l72iwmkslf46z5zcb795j3c",
     "url": "https://github.com/LineageOS/android_packages_apps_SettingsIntelligence"
   },
   "packages/apps/SetupWizard": {
@@ -6571,13 +6590,13 @@
     "url": "https://github.com/ForkLineageOS/android_packages_apps_WallpaperPicker2"
   },
   "packages/inputmethods/LatinIME": {
-    "dateTime": 1635774502,
+    "dateTime": 1642871238,
     "groups": [
       "pdk-fs"
     ],
-    "rev": "7b138adecc4244443141878df6825bed2aa622a1",
+    "rev": "1a711f486b93a7a56dbc3d5860b98c530657c98b",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "041hbwj53rca6yih852qiiglj9djhack4bkqjjc634r9v8q99k4c",
+    "sha256": "12f6z57d94rm9i5h1yhaiypg38nv68fh5rvvfzsh0mprcg5pcnr1",
     "url": "https://github.com/LineageOS/android_packages_inputmethods_LatinIME"
   },
   "packages/inputmethods/LeanbackIME": {
@@ -6795,17 +6814,18 @@
     "url": "https://github.com/LineageOS/android_packages_providers_DownloadProvider"
   },
   "packages/providers/MediaProvider": {
-    "dateTime": 1638891461,
+    "dateTime": 1641445897,
     "groups": [
       "pdk-cw-fs",
       "pdk-fs"
     ],
-    "rev": "24a14bb0721ed299ad5ef67fc3fdf49c250ae18d",
+    "rev": "4d35608e535d29c7c88a95421958426b163e1724",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1mk82wj4r7dgm0phws9qv9rvrsp1yp872z2d83ci4znqpz5h65k9",
+    "sha256": "0yn0qnd561qb43sk1ig0dd9zrjbvwndkw68af0dkriyywfcja7nk",
     "url": "https://github.com/LineageOS/android_packages_providers_MediaProvider"
   },
   "packages/providers/PartnerBookmarksProvider": {
+    "dateTime": 1551087178,
     "groups": [
       "pdk-fs"
     ],
@@ -7128,6 +7148,7 @@
     "url": "https://android.googlesource.com/platform/prebuilts/devtools"
   },
   "prebuilts/extract-tools": {
+    "dateTime": 1614104859,
     "groups": [],
     "rev": "2ffd09a03179514217dbdb7305418a1c50daf677",
     "revisionExpr": "refs/heads/lineage-18.1",
@@ -7518,6 +7539,7 @@
     "url": "https://android.googlesource.com/platform/prebuilts/tools"
   },
   "prebuilts/tools-lineage": {
+    "dateTime": 1609113656,
     "groups": [],
     "rev": "214ba0cba1a5abab0a17a298a53653c9585a5350",
     "revisionExpr": "refs/heads/lineage-18.1",
@@ -7597,11 +7619,11 @@
     "url": "https://android.googlesource.com/platform/system/bpfprogs"
   },
   "system/bt": {
-    "dateTime": 1639538831,
+    "dateTime": 1642917382,
     "groups": [],
-    "rev": "591c8aa7cc4f49ae812190dd3ea55cc09cdb5256",
+    "rev": "36f2b9b2799d25c0fce120ca209c4d2265d351d6",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1db76rfgwdqzwxgqnid6sjx1yki8b928h711xi791s6iqp0lj8zw",
+    "sha256": "1g5iwkff2vsxi83v7n35w24k3i2q752mf0mbh877i409jz4kfx3b",
     "url": "https://github.com/ForkLineageOS/android_system_bt"
   },
   "system/ca-certificates": {
@@ -8513,11 +8535,11 @@
     "url": "https://gitlab.com/arrowos-project/android_vendor_gapps"
   },
   "vendor/lineage": {
-    "dateTime": 1639761813,
+    "dateTime": 1642917602,
     "groups": [],
-    "rev": "8e71a6f85b0dd8f6ca5acc694e84e01c2a7fd499",
+    "rev": "2ef077ad706e84c49dddcee2fd13d29ddfd19070",
     "revisionExpr": "lineage-18.1",
-    "sha256": "1s2advhc51hhgvjijzwgx36i6c7r4h8hlr7zcv9apdw8wycq3igd",
+    "sha256": "0wjdvm4x6p7fk47hjj58cagp8xkgksx6y8zdal4bj26giq5b9mp3",
     "url": "https://github.com/ForkLineageOS/android_vendor_lineage"
   },
   "vendor/nxp/opensource/commonsys/external/libnfc-nci": {
@@ -8549,11 +8571,11 @@
     "url": "https://github.com/LineageOS/android_vendor_nxp_interfaces_opensource_nfc"
   },
   "vendor/nxp/opensource/pn5xx/halimpl": {
-    "dateTime": 1635960688,
+    "dateTime": 1641446146,
     "groups": [],
-    "rev": "a1c1929a16d88a719c879d5deaedb6aeea06e9af",
+    "rev": "8b9fe9cbcfce36ec58cf1668b46957929a342ba7",
     "revisionExpr": "lineage-18.1-pn5xx",
-    "sha256": "023n5pw3533abdacdhq2ng5pwnp2ibm8bcxd5w4l9pavg70kl9lr",
+    "sha256": "1nkmzsbrckd1aqls8fhhmkia5sf83934vf4af0f3mcrg1szkxc3l",
     "url": "https://github.com/LineageOS/android_vendor_nxp_opensource_halimpl"
   },
   "vendor/nxp/opensource/pn5xx/hidlimpl": {
@@ -8564,11 +8586,11 @@
     "url": "https://github.com/LineageOS/android_vendor_nxp_opensource_hidlimpl"
   },
   "vendor/nxp/opensource/sn100x/halimpl": {
-    "dateTime": 1635960538,
+    "dateTime": 1641446127,
     "groups": [],
-    "rev": "e38c7e68f744934764613a71a0f439d21d247d32",
+    "rev": "55ff6b674cf02c887fec9871f7546d661324597e",
     "revisionExpr": "lineage-18.1-sn100x",
-    "sha256": "0cfw6r48zhwpil9n0slgq1kz1pqv4yy8mkvzx2sj2nqvb936vhbb",
+    "sha256": "18g2jmga4f0acck09lmngzh3dpx0zl0jwdm3lciabwjxg1qxi77c",
     "url": "https://github.com/LineageOS/android_vendor_nxp_opensource_halimpl"
   },
   "vendor/nxp/opensource/sn100x/hidlimpl": {
@@ -8639,14 +8661,14 @@
     "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_packages_apps_Bluetooth"
   },
   "vendor/qcom/opensource/commonsys/system/bt": {
-    "dateTime": 1638892138,
+    "dateTime": 1641446201,
     "groups": [
       "pdk-qcom",
       "qcom"
     ],
-    "rev": "ae96fad6ff6088b7a67eb0e36b45868c8a01ff61",
+    "rev": "701d743d2088680ec7154cdd1c6c484fbf5b560f",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "1hyvhw1jimi64xm17jb8d0a0ba1r8kq4i79wmn59ivm0wj8559pk",
+    "sha256": "0fxvf9laf58cqqxwk96qwbxfsnsm9mbrv01fwnd3688c0rbmwzil",
     "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_system_bt"
   },
   "vendor/qcom/opensource/cryptfs_hw": {
@@ -8701,6 +8723,7 @@
     "url": "https://github.com/LineageOS/android_vendor_qcom_opensource_interfaces"
   },
   "vendor/qcom/opensource/libfmjni": {
+    "dateTime": 1587656332,
     "groups": [
       "pdk-qcom",
       "qcom"
