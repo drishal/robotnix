@@ -5865,13 +5865,13 @@
     "url": "https://github.com/LineageOS/www"
   },
   "lineage/wiki": {
-    "dateTime": 1643297117,
+    "dateTime": 1643677143,
     "groups": [
       "infra"
     ],
-    "rev": "c44c923da3c00b3b821b8588ca7cf5e189d4184e",
+    "rev": "66cc60c53ff234a29cc3f9ccb1483a459f406b5b",
     "revisionExpr": "master",
-    "sha256": "1qg1xcg1ilszg2740k1n8pnx0f3xzgqla67qyzc68dhy6rrrf3vv",
+    "sha256": "1w9cvm3kl9dnc5m3b52wiaw20scgw96rphl2gj6353y1n1wnk8ja",
     "url": "https://github.com/LineageOS/lineage_wiki"
   },
   "packages/apps/AudioFX": {
@@ -6866,11 +6866,11 @@
     "url": "https://github.com/LineageOS/android_packages_providers_UserDictionaryProvider"
   },
   "packages/resources/devicesettings": {
-    "dateTime": 1635274170,
+    "dateTime": 1643558256,
     "groups": [],
-    "rev": "6b4da8085c71642b11d3db9414b7308e4bbcd3b5",
+    "rev": "de23ecb4cc2c9b830d2786d85de6011c37b2cba5",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "08nfzmqnwd4mvlchl57jsc1ky8kgrswhcy8fy09a8an5fdx3gw6w",
+    "sha256": "1m0z1cxlf7cdr5f5npqqg20m79li7jp3ldsx19hvf7h79z2mw208",
     "url": "https://github.com/LineageOS/android_packages_resources_devicesettings"
   },
   "packages/screensavers/Basic": {
