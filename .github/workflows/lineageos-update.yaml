@@ -7,19 +7,20 @@ jobs:
     name: "Update ForkLineageOS"
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.4.0
       with:
         fetch-depth: 0
-    - uses: cachix/install-nix-action@v13
+    - uses: cachix/install-nix-action@v16
       with:
-        install_url: https://github.com/numtide/nix-flakes-installer/releases/download/nix-2.4pre20210823_af94b54/install
+        install_url: https://github.com/numtide/nix-unstable-installer/releases/download/nix-2.7.0pre20220209_52f5231/install
         extra_nix_config: |
           experimental-features = nix-command flakes
     - run: nix develop -c ./flavors/lineageos/update.sh lineage-18.1
+    - run: nix develop -c ./flavors/lineageos/update.sh lineage-19.0
     - run: sed -i "s/buildDateTime = mkDefault .*/buildDateTime = mkDefault $(date +%s);/" flavors/lineageos/default.nix
-    - uses: EndBug/add-and-commit@v7.3.0
+    - uses: EndBug/add-and-commit@v8.0.2
       with:
         author_name: Ilan Joselevich
         author_email: personal@ilanjoselevich.com
         message: 'ForkLineageOS: Update'
-        add: '["flavors/lineageos/default.nix","flavors/lineageos/lineage-18.1"]'
+        add: '["flavors/lineageos/default.nix","flavors/lineageos/lineage-18.1","flavors/lineageos/lineage-19.0"]'
