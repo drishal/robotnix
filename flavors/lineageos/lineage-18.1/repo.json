@@ -6457,11 +6457,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_SettingsIntelligence"
   },
   "packages/apps/SetupWizard": {
-    "dateTime": 1644714618,
+    "dateTime": 1644855462,
     "groups": [],
-    "rev": "9cfc52286cf2ae7bf469c48a37346b3d720b02cb",
+    "rev": "62b331d25801a3d16d8a2ef6776b7f3a657f416f",
     "revisionExpr": "refs/heads/lineage-18.1",
-    "sha256": "137dng13z0v54ysm938rgn8mxcqk7q7v68i2wczwqi0d32k752k0",
+    "sha256": "15wnbnigq7nng7irhwqj89az8zfhaf29aaq2bk8i04z152zmlgiy",
     "url": "https://github.com/LineageOS/android_packages_apps_SetupWizard"
   },
   "packages/apps/SimpleDeviceConfig": {
