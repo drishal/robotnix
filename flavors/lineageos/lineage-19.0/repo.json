@@ -6531,11 +6531,11 @@
     "url": "https://github.com/ForkLineageOS/android_frameworks_av"
   },
   "frameworks/base": {
-    "dateTime": 1644862581,
+    "dateTime": 1644894062,
     "groups": [],
-    "rev": "44a68ff240613ee2579c67a4b202a33125286bfc",
+    "rev": "c452ff112365640b58f0d7a08ce47cc16a7cb77a",
     "revisionExpr": "lineage-19.0",
-    "sha256": "115i4z3h4k8z06jskb6rvlqahkrwfxilnvwcfyfasiysshlxr2pa",
+    "sha256": "0amggg8yrqry7fd9wcscxldnlv9i9783vdvafh6f9knwlf6p3mq8",
     "url": "https://github.com/ForkLineageOS/android_frameworks_base"
   },
   "frameworks/compile/libbcc": {
@@ -8825,11 +8825,11 @@
     "url": "https://github.com/LineageOS/android_packages_apps_Seedvault"
   },
   "packages/apps/Settings": {
-    "dateTime": 1644863474,
+    "dateTime": 1644895591,
     "groups": [],
-    "rev": "dc6b67dcd532b82d802e2732eda43c04518dbc5b",
+    "rev": "a8f8a84b7e398e2a2d55e9674070f85a88f095b9",
     "revisionExpr": "lineage-19.0",
-    "sha256": "0dvhgd8aw2sfx12jgpmak9qlmccxvg2an9ppi3knwcv77a3f3bqi",
+    "sha256": "1hv240ng9rd4fpjm49a1a8an7663vc9lzglvk0077m9rdd1pfh9v",
     "url": "https://github.com/ForkLineageOS/android_packages_apps_Settings"
   },
   "packages/apps/SettingsIntelligence": {
