@@ -16,11 +16,11 @@ jobs:
         extra_nix_config: |
           experimental-features = nix-command flakes
     - run: nix develop -c ./flavors/lineageos/update.sh lineage-18.1
-    - run: nix develop -c ./flavors/lineageos/update.sh lineage-19.0
+    - run: nix develop -c ./flavors/lineageos/update.sh lineage-19.1
     - run: sed -i "s/buildDateTime = mkDefault .*/buildDateTime = mkDefault $(date +%s);/" flavors/lineageos/default.nix
     - uses: EndBug/add-and-commit@v8.0.2
       with:
         author_name: Ilan Joselevich
         author_email: personal@ilanjoselevich.com
         message: 'ForkLineageOS: Update'
-        add: '["flavors/lineageos/default.nix","flavors/lineageos/lineage-18.1","flavors/lineageos/lineage-19.0"]'
+        add: '["flavors/lineageos/default.nix","flavors/lineageos/lineage-18.1","flavors/lineageos/lineage-19.1"]'
